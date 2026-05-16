@@ -615,7 +615,6 @@ footer{background:var(--BK);padding:5rem 0 0;border-top:3px solid var(--P);}
               <span class="ms" style="font-size:14px;color:rgba(255,255,255,.35);margin-left:auto;">chevron_right</span>
             </a>
             <div class="sub-m">
-              <!-- FIX: Updated AssetMach href to https://www.assetmach.com/ -->
               <a href="https://www.assetmach.com/" target="_blank" rel="noopener"><span class="ms">corporate_fare</span><div>AssetMach<span class="sub-note">AI-powered enterprise asset management</span></div></a>
               <div class="ddm-sep"></div>
               <a href="https://careerviz.com/" target="_blank" rel="noopener"><span class="ms">work</span><div>CareerViz<span class="sub-note">AI career &amp; talent enablement platform</span></div></a>
@@ -638,7 +637,6 @@ footer{background:var(--BK);padding:5rem 0 0;border-top:3px solid var(--P);}
   <a href="#about" onclick="closeMenu()">Who We Are</a>
   <a href="#services" onclick="closeMenu()">What We Do</a>
   <a href="#products" onclick="closeMenu()" class="mob-sub">↳ Products</a>
-  <!-- FIX: Updated AssetMach mobile link -->
   <a href="https://www.assetmach.com/" target="_blank" rel="noopener" onclick="closeMenu()" style="padding-left:3.5rem;font-size:12px;color:rgba(255,255,255,.35);">↳ AssetMach</a>
   <a href="https://careerviz.com/" target="_blank" rel="noopener" onclick="closeMenu()" style="padding-left:3.5rem;font-size:12px;color:rgba(255,255,255,.35);">↳ CareerViz</a>
   <a href="#services" onclick="closeMenu()" class="mob-sub">↳ Services</a>
@@ -816,15 +814,159 @@ footer{background:var(--BK);padding:5rem 0 0;border-top:3px solid var(--P);}
 <section id="services"><div class="wrap">
   <div class="svc-head"><div class="eyebrow" style="display:flex;justify-content:center;">What We Do</div><div class="sec-h">Engineering Solutions for All Industries</div><p class="sec-p" style="text-align:center;max-width:600px;margin:0 auto;">From ideation and engineering to deployment, operations, and continuous optimization — delivering capabilities that are secure, scalable, and designed for real-world impact.</p></div>
   <div class="svc-grid">
-    <div class="svc-card"><div class="svc-ic"><span class="ms">terminal</span></div><h5>Technology &amp; Consulting</h5><p>We partner with organizations to define technology strategy, digital roadmaps, operating models, and transformation programs aligned to business outcomes.</p><div class="svc-tags"><span class="svc-tag">IT Strategy</span><span class="svc-tag">Digital Roadmaps</span><span class="svc-tag">Operating Models</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">precision_manufacturing</span></div><h5>Engineering &amp; Industrial Technology</h5><p>From hardware-integrated systems to industrial platforms, we design and engineer solutions for factories, infrastructure, utilities, and mission-critical environments.</p><div class="svc-tags"><span class="svc-tag">Industrial Platforms</span><span class="svc-tag">SCADA</span><span class="svc-tag">IoT</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">inventory_2</span></div><h5>Product Engineering &amp; R&amp;D</h5><p>We build enterprise-grade B2B and scalable B2C digital products using modern architectures, cloud-native design, and AI-first principles.</p><div class="svc-tags"><span class="svc-tag">Cloud-Native</span><span class="svc-tag">AI-First</span><span class="svc-tag">B2B &amp; B2C</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">analytics</span></div><h5>Data Science &amp; Artificial Intelligence</h5><p>We turn data into intelligence — using analytics, machine learning, and AI to enable predictive insights, automation, and smarter decision-making.</p><div class="svc-tags"><span class="svc-tag">Machine Learning</span><span class="svc-tag">Predictive Analytics</span><span class="svc-tag">Automation</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">cloud_done</span></div><h5>Cloud, Infrastructure &amp; Networks</h5><p>We design, migrate, and manage secure, resilient, high-performance infrastructure across cloud, on-prem, and hybrid environments.</p><div class="svc-tags"><span class="svc-tag">Cloud Migration</span><span class="svc-tag">Hybrid Infrastructure</span><span class="svc-tag">Networking</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">encrypted</span></div><h5>Cybersecurity</h5><p>Security is foundational. Our solutions embed governance, risk management, compliance, and cyber resilience by design — not as an afterthought.</p><div class="svc-tags"><span class="svc-tag">Governance</span><span class="svc-tag">Risk &amp; Compliance</span><span class="svc-tag">Cyber Resilience</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">verified</span></div><h5>Quality Control, Assurance &amp; Operations</h5><p>We help organizations ensure operational excellence through quality control systems, inspection platforms, process assurance, and performance optimization.</p><div class="svc-tags"><span class="svc-tag">Quality Systems</span><span class="svc-tag">Process Assurance</span><span class="svc-tag">Performance</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">school</span></div><h5>EdTech</h5><p>At SYNVERSYS, we have designed an AI-based platform powered by established psychometric models, where students and professionals can envision their entire career aligned to their abilities and skills.</p><div class="svc-tags"><span class="svc-tag">AI Platform</span><span class="svc-tag">Psychometric Models</span><span class="svc-tag">Career Intelligence</span></div></div>
-    <div class="svc-card"><div class="svc-ic"><span class="ms">handshake</span></div><h5>Sales Enablement &amp; Channel Partnerships</h5><p>We work with ecosystem partners, OEMs, and channel networks to scale technology adoption and market reach for sustained growth.</p><div class="svc-tags"><span class="svc-tag">Channel Networks</span><span class="svc-tag">OEM Partnerships</span><span class="svc-tag">Market Reach</span></div></div>
+
+    <!-- 1. Technology Services -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">terminal</span></div>
+      <h5>Technology Services</h5>
+      <p>We deliver end-to-end technology services that enable organizations to build, modernize, and scale their digital capabilities. From architecture design to implementation and managed services, we ensure systems are secure, resilient, and future-ready. Our approach combines engineering rigor with business alignment to drive measurable outcomes. We help enterprises transform technology from a support function into a strategic advantage.</p>
+      <div class="svc-tags"><span class="svc-tag">Architecture Design</span><span class="svc-tag">Managed Services</span><span class="svc-tag">Digital Capabilities</span></div>
+    </div>
+
+    <!-- 2. EdTech -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">school</span></div>
+      <h5>EdTech</h5>
+      <p>Our EdTech solutions bridge the gap between learning and real-world skills through intelligent, technology-driven platforms. We design systems that combine adaptive learning, analytics, and personalized pathways to enhance student outcomes. From institutions to corporate learning environments, we enable scalable, engaging, and measurable education experiences. Our platforms are built to prepare learners for the demands of a rapidly evolving digital economy.</p>
+      <div class="svc-tags"><span class="svc-tag">Adaptive Learning</span><span class="svc-tag">Analytics</span><span class="svc-tag">Personalized Pathways</span></div>
+    </div>
+
+    <!-- 3. Consulting & Advisory -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">lightbulb</span></div>
+      <h5>Consulting &amp; Advisory</h5>
+      <p>We provide strategic consulting and advisory services that help organizations define, plan, and execute their digital transformation journeys. Our experts work closely with leadership teams to align technology with business goals, optimize operations, and mitigate risks. From strategy formulation to execution oversight, we bring clarity, structure, and measurable impact. We act as a trusted partner in navigating complex technology and business decisions.</p>
+      <div class="svc-tags"><span class="svc-tag">Digital Transformation</span><span class="svc-tag">Strategy Formulation</span><span class="svc-tag">Risk Mitigation</span></div>
+    </div>
+
+    <!-- 4. Quality Control & Assurance -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">verified</span></div>
+      <h5>Quality Control &amp; Assurance</h5>
+      <p>Synversys delivers robust quality control and assurance frameworks that ensure operational excellence across systems and processes. We design and implement inspection platforms, testing methodologies, and compliance mechanisms tailored to enterprise environments. Our solutions help organizations maintain consistency, reduce risk, and meet regulatory standards. Quality is embedded into every stage—from design to deployment and beyond.</p>
+      <div class="svc-tags"><span class="svc-tag">Inspection Platforms</span><span class="svc-tag">Testing Methodologies</span><span class="svc-tag">Compliance</span></div>
+    </div>
+
+    <!-- 5. Networks -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">hub</span></div>
+      <h5>Networks</h5>
+      <p>We design, implement, and manage high-performance network infrastructures that are secure, scalable, and resilient. Our expertise spans enterprise networking, cloud connectivity, SD-WAN, and next-generation security architectures. We ensure seamless communication across systems while optimizing performance and minimizing downtime. Networks are engineered as critical business enablers, not just infrastructure components.</p>
+      <div class="svc-tags"><span class="svc-tag">Enterprise Networking</span><span class="svc-tag">SD-WAN</span><span class="svc-tag">Cloud Connectivity</span></div>
+    </div>
+
+    <!-- 6. DMS -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">folder_open</span></div>
+      <h5>DMS (Document Management Systems)</h5>
+      <p>Our Document Management Systems enable organizations to digitize, organize, and control their information assets efficiently. We build secure, compliant, and searchable repositories that improve accessibility and collaboration. From workflow automation to version control and audit trails, our DMS solutions streamline document lifecycles. This results in improved productivity, reduced operational overhead, and stronger governance.</p>
+      <div class="svc-tags"><span class="svc-tag">Workflow Automation</span><span class="svc-tag">Version Control</span><span class="svc-tag">Audit Trails</span></div>
+    </div>
+
+    <!-- 7. Hardware -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">memory</span></div>
+      <h5>Hardware</h5>
+      <p>Synversys designs and integrates hardware solutions that complement digital systems in industrial and enterprise environments. From IoT-enabled devices to infrastructure components, we ensure seamless interaction between physical and digital ecosystems. Our hardware capabilities support reliability, performance, and scalability in real-world conditions. We focus on delivering engineered solutions that are durable, efficient, and future-ready.</p>
+      <div class="svc-tags"><span class="svc-tag">IoT Devices</span><span class="svc-tag">Infrastructure Components</span><span class="svc-tag">Systems Integration</span></div>
+    </div>
+
+    <!-- 8. Software -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">code</span></div>
+      <h5>Software</h5>
+      <p>We build scalable, secure, and high-performance software solutions tailored to enterprise and consumer needs. Our expertise spans custom application development, cloud-native platforms, and enterprise system integration. We follow modern development practices to ensure agility, reliability, and long-term maintainability. Every solution is designed with user experience, performance, and scalability at its core.</p>
+      <div class="svc-tags"><span class="svc-tag">Custom Development</span><span class="svc-tag">Cloud-Native</span><span class="svc-tag">Enterprise Integration</span></div>
+    </div>
+
+    <!-- 9. Industrial Tech -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">precision_manufacturing</span></div>
+      <h5>Industrial Tech</h5>
+      <p>Our Industrial Technology solutions integrate digital intelligence into physical operations across factories, infrastructure, and utilities. We enable smart manufacturing, predictive maintenance, and real-time monitoring through advanced platforms. By combining IoT, automation, and analytics, we help organizations improve efficiency, reduce downtime, and optimize performance. We bring engineering precision to industrial transformation.</p>
+      <div class="svc-tags"><span class="svc-tag">Smart Manufacturing</span><span class="svc-tag">Predictive Maintenance</span><span class="svc-tag">Real-Time Monitoring</span></div>
+    </div>
+
+    <!-- 10. R&D -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">science</span></div>
+      <h5>R&amp;D (Research &amp; Development)</h5>
+      <p>Innovation is at the core of Synversys. Our R&D initiatives focus on exploring emerging technologies, developing new products, and solving complex industry challenges. We invest in building proprietary solutions and intellectual property that drive long-term value. From concept validation to prototype development, we turn ideas into scalable, market-ready solutions.</p>
+      <div class="svc-tags"><span class="svc-tag">Emerging Technologies</span><span class="svc-tag">Prototype Development</span><span class="svc-tag">IP Development</span></div>
+    </div>
+
+    <!-- 11. Product Management -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">inventory_2</span></div>
+      <h5>Product Management</h5>
+      <p>We provide end-to-end product management capabilities—from ideation to launch and continuous improvement. Our approach combines market insights, user-centric design, and agile execution to build successful products. We help organizations define product strategy, prioritize features, and accelerate time-to-market. Synversys ensures that every product delivers measurable business value and sustainable growth.</p>
+      <div class="svc-tags"><span class="svc-tag">Product Strategy</span><span class="svc-tag">Agile Execution</span><span class="svc-tag">Time-to-Market</span></div>
+    </div>
+
+    <!-- 12. Data Science, AI & ML -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">analytics</span></div>
+      <h5>Data Science, AI &amp; Machine Learning</h5>
+      <p>Synversys leverages data science, artificial intelligence, and machine learning to transform raw data into actionable intelligence. We design and deploy advanced analytics models, predictive algorithms, and AI-driven systems that enhance decision-making and automate complex processes. Our solutions help organizations unlock hidden insights, improve operational efficiency, and drive innovation at scale. From data engineering to model deployment, we enable end-to-end intelligent ecosystems.</p>
+      <div class="svc-tags"><span class="svc-tag">Machine Learning</span><span class="svc-tag">Predictive Analytics</span><span class="svc-tag">AI-Driven Systems</span></div>
+    </div>
+
+    <!-- 13. Cloud Services & Operations -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">cloud_done</span></div>
+      <h5>Cloud Services &amp; Operations</h5>
+      <p>We enable organizations to harness the full potential of cloud through secure, scalable, and optimized architectures. Our cloud services span migration, modernization, multi-cloud strategy, and continuous operations management. We ensure high availability, performance optimization, and cost efficiency across cloud environments. Synversys helps enterprises build resilient digital foundations that support rapid innovation and global scalability.</p>
+      <div class="svc-tags"><span class="svc-tag">Cloud Migration</span><span class="svc-tag">Multi-Cloud Strategy</span><span class="svc-tag">Operations Management</span></div>
+    </div>
+
+    <!-- 14. Cyber Security -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">encrypted</span></div>
+      <h5>Cyber Security</h5>
+      <p>Security is embedded at the core of everything we build. Synversys delivers comprehensive cybersecurity solutions covering governance, risk management, threat detection, and incident response. We design zero-trust architectures, implement advanced security controls, and ensure compliance with global standards. Our approach enables organizations to operate with confidence in an increasingly complex threat landscape.</p>
+      <div class="svc-tags"><span class="svc-tag">Zero-Trust Architecture</span><span class="svc-tag">Threat Detection</span><span class="svc-tag">Incident Response</span></div>
+    </div>
+
+    <!-- 15. Infrastructure -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">dns</span></div>
+      <h5>Infrastructure</h5>
+      <p>We design and manage robust infrastructure ecosystems that support mission-critical business operations. Our capabilities span data centers, hybrid environments, compute, storage, and network infrastructure. We focus on performance, reliability, and scalability to ensure seamless operations across enterprise systems. Synversys transforms infrastructure into a strategic enabler of growth and resilience.</p>
+      <div class="svc-tags"><span class="svc-tag">Data Centers</span><span class="svc-tag">Hybrid Environments</span><span class="svc-tag">Compute &amp; Storage</span></div>
+    </div>
+
+    <!-- 16. Sales & Related Services -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">trending_up</span></div>
+      <h5>Sales &amp; Related Services</h5>
+      <p>Synversys supports organizations in scaling their technology offerings through structured sales enablement and go-to-market strategies. We provide solutions across pre-sales consulting, solution positioning, customer engagement, and revenue optimization. Our approach aligns technical capabilities with market needs to drive sustainable growth. We help bridge the gap between innovation and commercial success.</p>
+      <div class="svc-tags"><span class="svc-tag">Sales Enablement</span><span class="svc-tag">Go-to-Market</span><span class="svc-tag">Revenue Optimization</span></div>
+    </div>
+
+    <!-- 17. Tech Operations -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">settings_applications</span></div>
+      <h5>Tech Operations</h5>
+      <p>We deliver end-to-end technology operations services that ensure systems run efficiently, securely, and continuously. From monitoring and incident management to performance optimization and automation, we manage the operational backbone of digital ecosystems. Our focus is on reliability, uptime, and operational excellence. Synversys enables organizations to focus on innovation while we manage the complexity of operations.</p>
+      <div class="svc-tags"><span class="svc-tag">Monitoring</span><span class="svc-tag">Incident Management</span><span class="svc-tag">Performance Optimization</span></div>
+    </div>
+
+    <!-- 18. Channel Partnership & Distribution -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">handshake</span></div>
+      <h5>Channel Partnership &amp; Distribution</h5>
+      <p>We build and manage strong partner ecosystems to expand market reach and accelerate growth. Synversys collaborates with OEMs, technology providers, and distribution networks to deliver integrated solutions. Our channel strategies focus on scalability, efficiency, and mutual value creation. We enable seamless collaboration across partners to deliver consistent and high-quality outcomes.</p>
+      <div class="svc-tags"><span class="svc-tag">Partner Ecosystems</span><span class="svc-tag">OEM Collaboration</span><span class="svc-tag">Distribution Networks</span></div>
+    </div>
+
+    <!-- 19. Urban Tech & Smart Cities -->
+    <div class="svc-card">
+      <div class="svc-ic"><span class="ms">location_city</span></div>
+      <h5>Urban Tech &amp; Smart Cities</h5>
+      <p>Synversys drives innovation in urban ecosystems through smart city technologies and intelligent infrastructure solutions. We design platforms that integrate data, IoT, and analytics to improve urban living, mobility, sustainability, and governance. Our solutions enable real-time monitoring, efficient resource management, and citizen-centric services. We help cities evolve into connected, resilient, and future-ready environments.</p>
+      <div class="svc-tags"><span class="svc-tag">Smart City Platforms</span><span class="svc-tag">Urban IoT</span><span class="svc-tag">Citizen Services</span></div>
+    </div>
+
   </div>
 </div></section>
 
@@ -994,14 +1136,25 @@ footer{background:var(--BK);padding:5rem 0 0;border-top:3px solid var(--P);}
             <option value="">Select an option...</option>
             <option>AssetMach Platform</option>
             <option>Careerviz Platform</option>
-            <option>Technology &amp; Consulting</option>
-            <option>Engineering &amp; Industrial Technology</option>
-            <option>Data Science &amp; AI</option>
-            <option>Cloud, Infrastructure &amp; Networks</option>
-            <option>Cybersecurity</option>
-            <option>Quality Control &amp; Operations</option>
+            <option>Technology Services</option>
             <option>EdTech</option>
-            <option>Sales Enablement &amp; Partnerships</option>
+            <option>Consulting &amp; Advisory</option>
+            <option>Quality Control &amp; Assurance</option>
+            <option>Networks</option>
+            <option>DMS (Document Management Systems)</option>
+            <option>Hardware</option>
+            <option>Software</option>
+            <option>Industrial Tech</option>
+            <option>R&amp;D (Research &amp; Development)</option>
+            <option>Product Management</option>
+            <option>Data Science, AI &amp; Machine Learning</option>
+            <option>Cloud Services &amp; Operations</option>
+            <option>Cyber Security</option>
+            <option>Infrastructure</option>
+            <option>Sales &amp; Related Services</option>
+            <option>Tech Operations</option>
+            <option>Channel Partnership &amp; Distribution</option>
+            <option>Urban Tech &amp; Smart Cities</option>
             <option>General Inquiry</option>
           </select>
         </div>
@@ -1089,24 +1242,19 @@ function prevSlide() { clearAuto(); goSlide(slideIdx - 1); startAuto(); }
 function startAuto() { sliderTimer = setInterval(function() { goSlide(slideIdx + 1); }, 5000); }
 function clearAuto() { if (sliderTimer) clearInterval(sliderTimer); }
 
-/* ── PRODUCT TABS ── FIX: Robust tab switching ── */
+/* ── PRODUCT TABS ── */
 function switchPanel(id, btn) {
-  /* Hide all panels */
   document.querySelectorAll('.prod-p').forEach(function(p) {
     p.classList.remove('active');
   });
-  /* Deactivate all tab buttons */
   document.querySelectorAll('.ptab').forEach(function(b) {
     b.classList.remove('active');
   });
-  /* Show the selected panel */
   var panel = document.getElementById('panel-' + id);
   if (panel) panel.classList.add('active');
-  /* Activate the clicked button — support both direct pass and null */
   if (btn) {
     btn.classList.add('active');
   } else {
-    /* Called programmatically without a button reference */
     var fallback = document.getElementById('tab-' + id);
     if (fallback) fallback.classList.add('active');
   }
@@ -1143,7 +1291,7 @@ window.addEventListener('scroll', function() {
   });
 });
 
-/* ── CONTACT FORM — client-side validation before FormSubmit ── */
+/* ── CONTACT FORM ── */
 document.addEventListener('DOMContentLoaded', function() {
   initSlider();
 
