@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SYNVERSYS | Innovating for a Smarter Future</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet"/>
+
+
+<style>
+:root{
+  --P:#003F5C;
+  --PL:#185c77;
+  --PD:#002a3e;
+  --A:#acd1e6;
+  --AL:#cde6f2;
+  --W:#FFFFFF;
+  --BK:#0b0d10;
+  --D1:#111820;
+  --D2:#1a2535;
+  --D3:#232d3f;
+  --OFF:#f4f6f8;
+  --G1:#6b7280;
+  --G2:#9ca3af;
+  --GL:#e5e7eb;
+  --RED:#c0392b;
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+html{font-size:16px;overflow-x:hidden;width:100%;}
+body{font-family:'DM Sans',sans-serif;background:var(--W);color:var(--BK);overflow-x:hidden;text-align:justify;width:100%;max-width:100vw;}
+h1,h2,h3,h4,h5,h6{font-family:'Barlow',sans-serif;text-align:left;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;object-fit:cover;}
+.ms{font-family:'Material Symbols Outlined';font-size:inherit;line-height:1;vertical-align:middle;}
+
+/* ─── KEYFRAMES ─── */
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes barSlide{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes spinRing{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes countUp{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+
+/* ─── UTILS ─── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:var(--A);margin-bottom:1rem;}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--A);flex-shrink:0;}
+.eyebrow.white::before{background:rgba(255,255,255,.5);}
+.eyebrow.white{color:rgba(255,255,255,.65);}
+.sec-h{font-size:44px;font-weight:900;line-height:1.06;letter-spacing:-1px;margin-bottom:1.25rem;}
+.sec-h.w{color:#fff;}
+.sec-p{font-size:15px;line-height:1.9;color:var(--G1);}
+.sec-p.w{color:rgba(255,255,255,.55);}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 32px;font-family:'Barlow',sans-serif;font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s;}
+.btn-primary{background:var(--P);color:#fff;}
+.btn-primary:hover{background:var(--PL);}
+.btn-accent{background:var(--A);color:var(--BK);}
+.btn-accent:hover{background:var(--AL);color:var(--BK);}
+.btn-outline{background:transparent;color:var(--W);border:2px solid rgba(255,255,255,.35);}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.btn-outline-p{background:transparent;color:var(--P);border:2px solid var(--P);}
+.btn-outline-p:hover{background:var(--P);color:#fff;}
+
+/* ─── TOPBAR ─── */
+.topbar{background:var(--PD);padding:.55rem 0;}
+.tb-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+.tb-left{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.tb-item{display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.55);font-family:'DM Sans',sans-serif;}
+.tb-item .ms{font-size:14px;color:var(--A);}
+.tb-right{display:flex;align-items:center;gap:.5rem;}
+.tb-soc{width:26px;height:26px;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;}
+.tb-soc:hover{background:var(--A);border-color:var(--A);}
+.tb-soc svg{width:11px;height:11px;fill:rgba(255,255,255,.4);}
+.tb-soc:hover svg{fill:#fff;}
+
+/* ─── NAV ─── */
+nav{background:#185c77;border-bottom:2px solid rgba(0,0,0,.15);position:sticky;top:0;z-index:400;}
+.nav-wrap{max-width:1200px;margin:0 auto;padding:0 2rem;height:80px;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+.logo img{height:64px;width:auto;max-width:240px;object-fit:contain;}
+.nav-links{display:flex;align-items:center;list-style:none;gap:.1rem;flex:1;}
+.nav-links>li>a{font-family:'Barlow',sans-serif;font-weight:600;font-size:13px;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.92);padding:.5rem 1rem;display:block;transition:color .2s;position:relative;}
+.nav-links>li>a::after{content:'';position:absolute;bottom:-2px;left:1rem;right:1rem;height:2px;background:rgba(255,255,255,.9);transform:scaleX(0);transition:transform .2s;}
+.nav-links>li>a:hover,.nav-links>li>a.act{color:#fff;}
+.nav-links>li>a:hover::after,.nav-links>li>a.act::after{transform:scaleX(1);}
+.dd{position:relative;}
+.ddm{display:none;position:absolute;top:calc(100%+2px);left:0;background:var(--D2);border-top:2px solid var(--A);min-width:230px;padding:6px;box-shadow:0 16px 48px rgba(0,0,0,.5);z-index:500;}
+.ddm::before{content:'';position:absolute;top:-18px;left:0;right:0;height:18px;}
+.dd:hover .ddm{display:block;}
+.ddm a{display:flex;align-items:center;gap:9px;padding:9px 14px;font-family:'Barlow',sans-serif;font-weight:600;font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.65);transition:all .15s;}
+.ddm a:hover{color:var(--A);background:rgba(0,180,216,.06);}
+.ddm a .ms{font-size:16px;color:var(--G2);}
+.ddm a:hover .ms{color:var(--A);}
+.ddm-sep{height:1px;background:rgba(255,255,255,.07);margin:4px 8px;}
+.ddm-lbl{padding:6px 14px 2px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.2);font-family:'DM Sans',sans-serif;}
+.has-sub{position:relative;}
+.has-sub>a{display:flex;justify-content:space-between;align-items:center;gap:6px;}
+.sub-m{display:none;position:absolute;top:0;left:calc(100% + 2px);background:var(--D2);border-top:2px solid var(--A);min-width:260px;padding:6px;box-shadow:0 16px 48px rgba(0,0,0,.5);z-index:600;}
+.has-sub:hover .sub-m{display:block;}
+.has-sub:hover>a{color:var(--A);background:rgba(0,180,216,.08);}
+.sub-m a{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;font-family:'Barlow',sans-serif;font-weight:600;font-size:12px;text-transform:uppercase;color:rgba(255,255,255,.65);transition:all .15s;}
+.sub-m a:hover{color:var(--A);background:rgba(0,180,216,.06);}
+.sub-m a .ms{font-size:18px;color:var(--G2);flex-shrink:0;margin-top:1px;}
+.sub-m a:hover .ms{color:var(--A);}
+.sub-note{font-size:10px;color:rgba(255,255,255,.3);text-transform:none;font-family:'DM Sans',sans-serif;margin-top:3px;letter-spacing:0;display:block;font-weight:400;line-height:1.4;}
+.ddm-item-plain{display:flex;align-items:center;gap:9px;padding:9px 14px;font-family:'Barlow',sans-serif;font-weight:600;font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.35);cursor:default;}
+.nav-cta{padding:10px 22px;background:var(--P);color:#fff;font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s;white-space:nowrap;margin-left:1rem;}
+.nav-cta:hover{background:var(--PL);}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.burger span{width:24px;height:2px;background:#fff;display:block;}
+.mob-menu{display:none;position:fixed;top:80px;left:0;right:0;bottom:0;background:var(--D1);border-top:2px solid var(--P);padding:1.5rem 2rem;z-index:399;flex-direction:column;gap:2px;overflow-y:auto;}
+.mob-menu.open{display:flex;}
+.mob-menu a{padding:12px 14px;font-family:'Barlow',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.05);display:block;transition:color .2s;}
+.mob-menu a:hover{color:var(--A);}
+.mob-menu .mob-cta-link{background:var(--A);color:var(--BK);text-align:center;margin-top:.75rem;border:none;}
+.mob-menu .mob-sub{padding-left:2rem;font-size:13px;color:rgba(255,255,255,.5);}
+
+/* ─── HERO SLIDER ─── */
+#home{position:relative;height:100vh;min-height:640px;overflow:hidden;background:var(--BK);}
+.slider-wrap{position:absolute;inset:0;}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;pointer-events:none;}
+.slide.s-active{opacity:1;pointer-events:auto;}
+.slide-img{position:absolute;inset:0;}
+.slide-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 6s ease;}
+.slide.s-active .slide-img img{transform:scale(1);}
+.slide:nth-child(1) .slide-img::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,13,18,.96) 38%,rgba(0,63,92,.55) 72%,rgba(0,63,92,.12) 100%);}
+.slide:nth-child(2) .slide-img::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,13,18,.96) 38%,rgba(0,80,60,.45) 72%,rgba(0,130,90,.1) 100%);}
+.slide:nth-child(3) .slide-img::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,13,18,.96) 38%,rgba(20,40,80,.55) 72%,rgba(0,100,180,.12) 100%);}
+.slide-body{position:absolute;inset:0;display:flex;align-items:center;z-index:5;overflow:hidden;}
+.slide-inner{max-width:1200px;margin:0 auto;padding:0 2rem;width:100%;display:grid;grid-template-columns:1fr 460px;gap:5rem;align-items:center;}
+.sl{opacity:0;transform:translateY(22px);transition:opacity .7s ease .3s,transform .7s ease .3s;}
+.slide.s-active .sl{opacity:1;transform:translateY(0);}
+.s-eye{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;}
+.s-eye .eline{width:28px;height:2px;background:var(--A);}
+.s-eye span{font-family:'Barlow',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--A);}
+.s-eye .s-badge{display:flex;align-items:center;gap:5px;padding:3px 10px;border:1px solid rgba(0,180,216,.3);background:rgba(0,180,216,.07);}
+.s-eye .s-badge .sdot{width:6px;height:6px;border-radius:50%;background:var(--A);animation:pulse 2s infinite;}
+.s-eye .s-badge em{font-size:9px;font-weight:700;color:var(--A);letter-spacing:2px;font-style:normal;}
+.s-h1{font-family:'Barlow Condensed',sans-serif;font-size:62px;line-height:.95;color:#fff;letter-spacing:2px;margin-bottom:.65rem;font-weight:900;text-transform:uppercase;}
+.s-h1 i{color:var(--A);font-style:normal;display:block;}
+.s-tag{font-family:'Barlow',sans-serif;font-size:14px;color:rgba(255,255,255,.4);letter-spacing:2.5px;text-transform:uppercase;font-weight:400;margin-bottom:.85rem;}
+.s-p{font-size:15px;color:rgba(255,255,255,.48);line-height:1.9;margin-bottom:2.25rem;max-width:520px;}
+.s-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.s-trust{display:flex;gap:2rem;flex-wrap:wrap;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.07);}
+.s-ti{display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,.36);font-weight:500;}
+.s-ti .ms{font-size:15px;color:var(--A);}
+.sr{display:flex;flex-direction:column;gap:.9rem;position:relative;}
+.sr-main{position:relative;overflow:hidden;}
+.sr-main img{width:100%;height:268px;object-fit:cover;display:block;}
+.sr-main::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(8,13,18,.8));z-index:1;}
+.sr-badge{position:absolute;bottom:0;left:0;z-index:2;background:var(--P);padding:1.1rem 1.5rem;}
+.srb-n{font-family:'Barlow Condensed',sans-serif;font-size:40px;color:#fff;line-height:1;letter-spacing:1px;font-weight:900;}
+.srb-l{font-size:9px;color:rgba(255,255,255,.6);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+.sr-2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
+.sr-sm{position:relative;overflow:hidden;}
+.sr-sm img{width:100%;height:128px;object-fit:cover;transition:transform .4s;}
+.sr-sm:hover img{transform:scale(1.06);}
+.sr-sm::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(0,63,92,.75));}
+.sr-sm-l{position:absolute;bottom:0;left:0;right:0;padding:.65rem .9rem;z-index:1;font-family:'Barlow',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;color:#fff;letter-spacing:.3px;}
+.sr-float{position:absolute;top:-14px;right:-14px;background:#fff;border-left:4px solid var(--P);padding:10px 15px;box-shadow:0 12px 40px rgba(0,0,0,.28);animation:floatY 4s ease-in-out infinite;z-index:3;}
+.srf-n{font-family:'Barlow Condensed',sans-serif;font-size:32px;color:var(--BK);line-height:1;letter-spacing:.5px;font-weight:900;}
+.srf-l{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--G1);margin-top:2px;}
+.s-dots{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;gap:.6rem;z-index:20;}
+.sdot-btn{width:36px;height:3px;background:rgba(255,255,255,.22);cursor:pointer;transition:all .3s;position:relative;overflow:hidden;}
+.sdot-btn.s-active{background:rgba(255,255,255,.22);}
+.sdot-btn.s-active::after{content:'';position:absolute;top:0;left:0;height:100%;background:var(--A);animation:sdotFill 5s linear forwards;}
+@keyframes sdotFill{from{width:0}to{width:100%}}
+.s-arrows{position:absolute;bottom:2rem;right:2rem;display:flex;gap:.5rem;z-index:20;}
+.sarr{width:42px;height:42px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;}
+.sarr:hover{background:var(--P);border-color:var(--P);}
+.sarr .ms{font-size:20px;color:#fff;}
+.s-topbar{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--P),var(--A),var(--P));z-index:15;}
+.s-rac{position:absolute;right:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,transparent,var(--A) 30%,var(--P) 70%,transparent);z-index:15;}
+.s-counter{position:absolute;top:50%;right:2rem;transform:translateY(-50%);z-index:20;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:2px;color:rgba(255,255,255,.22);writing-mode:vertical-rl;}
+
+/* ─── STATS BAND ─── */
+.stats-band{background:var(--P);padding:0;}
+.stats-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.sc{text-align:center;padding:2.5rem 1.5rem;border-right:1px solid rgba(255,255,255,.15);transition:background .2s;}
+.sc:last-child{border-right:none;}
+.sc:hover{background:rgba(0,0,0,.12);}
+.sc-n{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:#fff;line-height:1;display:block;}
+.sc-n em{font-style:normal;color:var(--A);}
+.sc-l{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.55);display:block;margin-top:.35rem;}
+
+/* ─── FEATURES STRIP ─── */
+.feat-strip{background:var(--W);border-bottom:1px solid var(--GL);}
+.feat-strip-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:80px 1fr 1fr;align-items:stretch;}
+.fs-play{display:flex;align-items:center;justify-content:center;padding:2rem;border-right:1px solid var(--GL);cursor:pointer;}
+.play-c{width:64px;height:64px;background:var(--P);display:flex;align-items:center;justify-content:center;transition:background .2s;position:relative;}
+.play-c::before{content:'';position:absolute;inset:-6px;border:2px solid rgba(0,63,92,.2);animation:spinRing 6s linear infinite;}
+.play-c:hover{background:var(--PL);}
+.play-c .ms{font-size:28px;color:#fff;}
+.fs-feat{display:flex;align-items:flex-start;gap:1.1rem;padding:2rem 2.5rem;border-right:1px solid var(--GL);}
+.fs-feat:last-child{border-right:none;}
+.fs-icon{width:50px;height:50px;background:var(--P);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.fs-icon .ms{font-size:24px;color:#fff;}
+.fs-b h5{font-family:'Barlow',sans-serif;font-size:17px;font-weight:800;text-transform:uppercase;color:var(--BK);margin-bottom:.3rem;}
+.fs-b p{font-size:13px;color:var(--G1);line-height:1.65;}
+
+/* ─── ABOUT ─── */
+#about{padding:7rem 0;background:var(--W);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.about-left .sec-p{margin-bottom:1.25rem;}
+.name-box{margin-top:2rem;padding:1.75rem;background:var(--OFF);border-left:4px solid var(--P);}
+.nb-t{font-family:'Barlow',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:var(--BK);margin-bottom:.35rem;}
+.nb-t em{font-style:normal;color:var(--P);}
+.nb-s{font-size:12px;color:var(--G1);margin-bottom:1.1rem;}
+.nb-pills{display:flex;gap:.65rem;flex-wrap:wrap;margin-bottom:1.1rem;}
+.nb-pill{background:#fff;border:1px solid var(--GL);border-top:3px solid var(--P);padding:9px 14px;}
+.nb-w{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--P);}
+.nb-d{font-size:11px;color:var(--G1);line-height:1.4;margin-top:3px;}
+.nb-meaning{font-style:italic;font-size:13px;color:var(--P);font-weight:600;padding-top:.9rem;border-top:1px solid var(--GL);}
+.about-btns{margin-top:1.75rem;display:flex;gap:1rem;flex-wrap:wrap;}
+.about-right{display:flex;flex-direction:column;gap:1.25rem;}
+.about-photo-wrap{position:relative;}
+.about-photo{width:100%;height:360px;object-fit:cover;}
+.about-badge{position:absolute;bottom:-20px;left:20px;background:var(--P);padding:1.75rem;text-align:center;min-width:120px;}
+.ab-n{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:#fff;line-height:1;}
+.ab-l{font-size:11px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:1px;margin-top:.25rem;}
+.about-mini{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:1.5rem;}
+.am-box{padding:1.25rem;background:var(--OFF);border-top:3px solid var(--GL);transition:border-color .2s;}
+.am-box:hover{border-top-color:var(--P);}
+.am-box.accent{background:var(--P);border-top-color:var(--PL);}
+.am-n{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--P);}
+.am-box.accent .am-n{color:var(--A);}
+.am-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--G2);margin-top:3px;}
+.am-box.accent .am-l{color:rgba(255,255,255,.6);}
+
+/* ─── PHILOSOPHY ─── */
+.philosophy{background:var(--D1);padding:7rem 0;position:relative;overflow:hidden;}
+.philosophy::before{content:'SYNVERSYS';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Barlow Condensed',sans-serif;font-size:160px;font-weight:900;color:rgba(255,255,255,.018);white-space:nowrap;pointer-events:none;}
+.phil-head{text-align:center;margin-bottom:4rem;}
+.phil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);}
+.pc{padding:2.75rem;background:var(--D1);position:relative;overflow:hidden;transition:background .3s;}
+.pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--P),var(--A));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.pc:hover{background:var(--D2);}
+.pc:hover::after{transform:scaleX(1);}
+.pc-num{font-family:'Barlow Condensed',sans-serif;font-size:64px;font-weight:900;color:rgba(255,255,255,.05);line-height:1;margin-bottom:.75rem;}
+.pc-tag{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--A);display:block;margin-bottom:.75rem;}
+.pc h4{font-size:24px;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:.65rem;}
+.pc p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.75;}
+
+/* ─── SECTORS — Bold Redesign ─── */
+.sectors-band{background:var(--W);padding:5rem 0;border-top:1px solid var(--GL);}
+.sb-head{text-align:center;margin-bottom:3rem;}
+.sb-head .eyebrow{justify-content:center;display:flex;}
+.sb-head h2{font-family:'Barlow',sans-serif;font-size:40px;font-weight:900;color:var(--BK);letter-spacing:-1px;line-height:1.06;margin-bottom:.75rem;text-align:center;}
+.sb-head p{font-size:15px;color:var(--G1);max-width:540px;margin:0 auto;line-height:1.8;}
+.sb-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:1200px;margin:0 auto;padding:0 2rem;}
+.sb-card{position:relative;overflow:hidden;padding:2.25rem 2rem;background:var(--OFF);border:1.5px solid var(--GL);border-top:4px solid var(--GL);cursor:pointer;transition:all .3s;display:flex;align-items:flex-start;gap:1.25rem;}
+.sb-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,63,92,.04),rgba(0,180,216,.04));opacity:0;transition:opacity .3s;}
+.sb-card:hover{border-color:var(--GL);border-top-color:var(--A);background:var(--W);box-shadow:0 8px 32px rgba(0,63,92,.1);transform:translateY(-4px);}
+.sb-card:hover::after{opacity:1;}
+.sb-card:nth-child(1):hover{border-top-color:var(--P);}
+.sb-card:nth-child(2):hover{border-top-color:var(--A);}
+.sb-card:nth-child(3):hover{border-top-color:#0e7490;}
+.sb-card:nth-child(4):hover{border-top-color:#0369a1;}
+.sb-card:nth-child(5):hover{border-top-color:var(--P);}
+.sb-card:nth-child(6):hover{border-top-color:var(--A);}
+.sb-icon{width:52px;height:52px;background:var(--P);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;position:relative;z-index:1;}
+.sb-card:hover .sb-icon{background:var(--A);}
+.sb-icon .ms{font-size:24px;color:#fff;}
+.sb-body{position:relative;z-index:1;}
+.sb-body h4{font-family:'Barlow',sans-serif;font-size:17px;font-weight:800;text-transform:uppercase;color:var(--BK);margin-bottom:.4rem;line-height:1.2;}
+.sb-body p{font-size:13px;color:var(--G1);line-height:1.65;}
+.sb-card:hover .sb-body h4{color:var(--P);}
+@media(max-width:1024px){.sb-cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.sb-cards{grid-template-columns:1fr;}}
+
+/* ─── SERVICES ─── */
+#services{background:var(--OFF);padding:7rem 0;}
+.svc-head{text-align:center;max-width:700px;margin:0 auto 4rem;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--GL);}
+.svc-card{background:var(--W);padding:2rem;position:relative;overflow:hidden;transition:all .3s;}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--GL);transition:background .3s;}
+.svc-card:hover{background:var(--OFF);}
+.svc-card:hover::before{background:var(--P);}
+.svc-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,63,92,.1);}
+.svc-ic{width:50px;height:50px;background:var(--P);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;transition:all .3s;}
+.svc-card:hover .svc-ic{background:var(--PL);}
+.svc-ic .ms{font-size:23px;color:#fff;}
+.svc-card h5{font-family:'Barlow',sans-serif;font-size:17px;font-weight:800;text-transform:uppercase;color:var(--BK);margin-bottom:.5rem;}
+.svc-card p{font-size:13px;color:var(--G1);line-height:1.7;margin-bottom:.85rem;}
+.svc-tags{display:flex;flex-wrap:wrap;gap:4px;}
+.svc-tag{padding:3px 9px;background:var(--OFF);border:1px solid var(--GL);font-size:10px;font-weight:600;color:var(--G2);}
+.svc-more{display:flex;align-items:center;gap:6px;font-family:'Barlow',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--P);margin-top:.85rem;transition:gap .2s;}
+.svc-card:hover .svc-more{gap:10px;}
+.svc-more .ms{font-size:16px;}
+
+/* ─── PRODUCTS ─── */
+#products{background:var(--D1);padding:7rem 0;}
+.prod-head{text-align:center;margin-bottom:3.5rem;}
+.prod-tabs{display:flex;justify-content:center;gap:0;margin-bottom:3.5rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);width:fit-content;margin-left:auto;margin-right:auto;}
+.ptab{padding:13px 32px;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.45);background:transparent;border:none;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px;}
+.ptab.active{background:var(--P);color:#fff;}
+.prod-p{display:none;}
+.prod-p.active{display:block;}
+.am-panel{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-top:3px solid var(--P);padding:3rem;margin-bottom:3.5rem;}
+.am-badge{display:inline-flex;align-items:center;gap:7px;padding:4px 13px;background:var(--P);color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.25rem;}
+.am-t{font-size:36px;font-weight:900;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:1rem;}
+.am-t em{font-style:normal;color:var(--A);}
+.am-dp{font-size:14px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:.85rem;}
+.am-checks{display:flex;flex-direction:column;gap:8px;margin:1.5rem 0;}
+.am-chk{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.75);}
+.am-chk .ms{font-size:16px;color:var(--A);}
+.mock{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.07);padding:1.25rem;}
+.mock-hdr{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem;background:rgba(255,255,255,.04);margin-bottom:.9rem;}
+.mock-hdr h6{font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.mock-live{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:700;color:rgba(255,255,255,.4);}
+.mock-live .dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite;}
+.m3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-bottom:.9rem;}
+.mc{padding:.8rem;background:rgba(255,255,255,.04);border-left:2px solid var(--P);}
+.mc-n{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;}
+.mc-l{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.3);margin-top:2px;}
+.mrows{display:flex;flex-direction:column;gap:5px;}
+.mrow{display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:rgba(255,255,255,.03);border-left:2px solid rgba(255,255,255,.05);transition:border-color .2s;}
+.mrow:hover{border-left-color:var(--A);}
+.mrn{font-size:12px;font-weight:600;color:#fff;}
+.mrs{font-size:10px;color:rgba(255,255,255,.25);}
+.mrv{font-size:12px;font-weight:700;color:var(--A);font-family:'Barlow',sans-serif;}
+.mrst{padding:2px 8px;font-size:10px;font-weight:700;}
+.st-ok{background:rgba(34,197,94,.1);color:#22c55e;}
+.st-rv{background:rgba(234,179,8,.1);color:#eab308;}
+.am-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);}
+.afc{padding:1.75rem;background:var(--D2);transition:background .3s;}
+.afc:hover{background:var(--D3);}
+.afc-ic{width:40px;height:40px;background:rgba(0,63,92,.5);display:flex;align-items:center;justify-content:center;margin-bottom:.85rem;}
+.afc-ic .ms{font-size:19px;color:var(--A);}
+.afc h5{font-family:'Barlow',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:.35rem;}
+.afc p{font-size:12px;color:rgba(255,255,255,.35);line-height:1.6;}
+.cv-panel{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-top:3px solid var(--A);padding:3rem;margin-bottom:3.5rem;}
+.cv-badge{display:inline-flex;align-items:center;gap:7px;padding:4px 13px;background:rgba(0,180,216,.15);border:1px solid rgba(0,180,216,.3);color:var(--A);font-family:'Barlow',sans-serif;font-weight:700;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.25rem;}
+.cv-t{font-size:36px;font-weight:900;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:1rem;}
+.cv-t em{font-style:normal;color:var(--A);}
+.cv-dp{font-size:14px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:.85rem;}
+.cv-checks{display:flex;flex-direction:column;gap:8px;margin:1.5rem 0;}
+.cv-chk{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.75);}
+.cv-chk .ms{font-size:16px;color:var(--A);}
+.cv-mock{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.07);padding:1.25rem;}
+.cv-top{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.9rem;}
+.cv-stat{padding:1.1rem;}
+.cv-stat.cy{background:var(--A);}
+.cv-stat.dk{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);}
+.cvs-n{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:#fff;}
+.cv-stat.cy .cvs-n{color:var(--BK);}
+.cvs-l{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.5);margin-top:3px;}
+.cv-stat.cy .cvs-l{color:rgba(0,0,0,.5);}
+.cv-jobs{display:flex;flex-direction:column;gap:5px;}
+.cvj{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:rgba(255,255,255,.03);border-left:2px solid rgba(255,255,255,.05);transition:border-color .2s;}
+.cvj:hover{border-left-color:var(--A);}
+.cvj h6{font-size:12px;font-weight:600;color:#fff;}
+.cvj span{font-size:10px;color:rgba(255,255,255,.3);}
+.cvj-tag{padding:2px 8px;font-size:10px;font-weight:700;}
+.cvj-tag.hot{background:rgba(192,57,43,.15);color:#f87171;}
+.cvj-tag.new{background:rgba(0,180,216,.12);color:var(--A);}
+.cv-feats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.05);}
+.cvfc{padding:1.75rem;background:var(--D2);transition:background .3s;}
+.cvfc:hover{background:var(--D3);}
+.cvfc-ic{width:40px;height:40px;background:rgba(0,63,92,.4);border:1px solid rgba(0,180,216,.2);display:flex;align-items:center;justify-content:center;margin-bottom:.85rem;}
+.cvfc-ic .ms{font-size:19px;color:var(--A);}
+.cvfc h5{font-family:'Barlow',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:.35rem;}
+.cvfc p{font-size:12px;color:rgba(255,255,255,.35);line-height:1.6;}
+
+/* ─── WHY SYNVERSYS ─── */
+#why{background:var(--W);padding:7rem 0;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.why-left .sec-p{margin-bottom:2rem;}
+.why-feats{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem;}
+.wf{display:flex;align-items:flex-start;gap:1rem;}
+.wf-ic{width:46px;height:46px;background:var(--P);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.wf-ic .ms{font-size:22px;color:#fff;}
+.wf-b h6{font-family:'Barlow',sans-serif;font-size:17px;font-weight:800;text-transform:uppercase;color:var(--BK);margin-bottom:.25rem;}
+.wf-b p{font-size:13px;color:var(--G1);line-height:1.65;}
+.why-right{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--GL);}
+.ws{padding:2.75rem;background:var(--W);text-align:center;transition:all .3s;}
+.ws:hover{background:var(--OFF);}
+.ws.p{background:var(--P);}
+.ws.p:hover{background:var(--PL);}
+.ws-n{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:900;color:var(--P);display:block;line-height:1;}
+.ws.p .ws-n{color:#fff;}
+.ws-n em{font-style:normal;color:var(--A);}
+.ws.p .ws-n em{color:var(--AL);}
+.ws-l{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--G2);display:block;margin-top:.5rem;}
+.ws.p .ws-l{color:rgba(255,255,255,.55);}
+
+/* ─── CTA BANNER ─── */
+.cta-banner{position:relative;padding:7rem 0;overflow:hidden;}
+.cta-bg{position:absolute;inset:0;}
+.cta-bg img{width:100%;height:100%;object-fit:cover;}
+.cta-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.78);}
+.cta-in{position:relative;z-index:1;text-align:center;max-width:700px;margin:0 auto;padding:0 2rem;}
+.cta-in h2{font-size:52px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:-1px;line-height:1.05;margin-bottom:1.25rem;}
+.cta-in h2 em{font-style:normal;color:var(--A);}
+.cta-in p{font-size:16px;color:rgba(255,255,255,.5);margin-bottom:2.5rem;line-height:1.8;}
+.cta-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+
+/* ─── VMM ─── */
+.vmm{background:var(--D2);padding:6rem 0;}
+.vmm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);}
+.vm{padding:2.75rem;background:var(--D2);transition:background .3s;position:relative;}
+.vm::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--P);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.vm.active{background:var(--P);}
+.vm.active::after{transform:scaleX(1);background:var(--A);}
+.vm:hover{background:var(--D3);}
+.vm-ic{font-size:44px;color:rgba(255,255,255,.12);display:block;margin-bottom:1rem;}
+.vm.active .vm-ic{color:rgba(255,255,255,.25);}
+.vm h4{font-family:'Barlow',sans-serif;font-size:22px;font-weight:800;text-transform:uppercase;color:#fff;margin-bottom:.85rem;}
+.vm p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.75;}
+.vm.active p{color:rgba(255,255,255,.8);}
+.vm-link{display:inline-flex;align-items:center;gap:7px;margin-top:1.25rem;font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.35);transition:color .2s;}
+.vm.active .vm-link{color:rgba(255,255,255,.75);}
+.vm-link:hover{color:#fff;}
+.vm-link .ms{font-size:15px;}
+
+/* ─── CONTACT ─── */
+#contact{background:var(--OFF);padding:7rem 0;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;}
+.contact-info .sec-h{font-size:36px;}
+.contact-info .sec-p{margin-bottom:2.5rem;}
+.ci-list{display:flex;flex-direction:column;gap:.85rem;}
+.ci{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--W);border-left:4px solid var(--P);transition:border-color .2s;}
+.ci:hover{border-left-color:var(--A);}
+.ci-ic{width:40px;height:40px;background:var(--P);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ci-ic .ms{font-size:19px;color:#fff;}
+.ci-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--G2);}
+.ci-val{font-size:14px;font-weight:600;color:var(--BK);margin-top:2px;}
+.cf{background:var(--W);border-top:4px solid var(--P);padding:2.5rem;text-align:left;}
+.cf h4{font-family:'Barlow',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--BK);margin-bottom:.25rem;text-align:left;}
+.cf-sub{font-size:13px;color:var(--G1);margin-bottom:1.5rem;text-align:left;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;}
+.fg{display:flex;flex-direction:column;gap:4px;margin-bottom:.75rem;}
+.fg label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--BK);text-align:left;display:block;}
+.fg input,.fg select,.fg textarea{padding:10px 13px;border:1.5px solid var(--GL);border-bottom:2px solid var(--GL);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--BK);background:#fff;outline:none;transition:border .2s;resize:none;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--P);}
+.fg input::placeholder,.fg textarea::placeholder{color:#bbb;}
+.fg input.field-error,.fg textarea.field-error{border-color:var(--RED)!important;}
+.form-sub{width:100%;padding:14px;background:var(--P);color:#fff;font-family:'Barlow',sans-serif;font-weight:800;font-size:14px;letter-spacing:.5px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.form-sub:hover:not(:disabled){background:var(--PL);}
+.form-sub:disabled{opacity:.65;cursor:not-allowed;}
+.form-note{font-size:11px;color:var(--G2);text-align:center;margin-top:.75rem;}
+.alert-box{display:none;padding:12px 16px;margin-bottom:1rem;font-size:13px;font-family:'DM Sans',sans-serif;border-left:4px solid;}
+.alert-box.success{background:#dcfce7;border-color:#16a34a;color:#15803d;}
+.alert-box.error{background:#fee2e2;border-color:#dc2626;color:#b91c1c;}
+
+/* ─── FAQ ─── */
+.faq-wrap{margin-top:5rem;}
+.faq-head{text-align:center;margin-bottom:2.5rem;}
+.faq-list{display:flex;flex-direction:column;gap:.65rem;max-width:860px;margin:0 auto;}
+.faq-item{background:var(--W);border:1px solid var(--GL);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.25rem;cursor:pointer;font-family:'Barlow',sans-serif;font-size:15px;font-weight:700;color:var(--BK);gap:1rem;transition:all .2s;}
+.faq-q:hover{color:var(--P);}
+.faq-item.open .faq-q{background:var(--P);color:#fff;}
+.faq-ico{width:24px;height:24px;border:1.5px solid var(--GL);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
+.faq-ico .ms{font-size:14px;}
+.faq-item.open .faq-ico{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);}
+.faq-item.open .faq-ico .ms{color:#fff;}
+.faq-a{display:none;padding:1rem 1.25rem;font-size:13px;color:var(--G1);line-height:1.75;border-top:1px solid var(--GL);}
+.faq-item.open .faq-a{display:block;}
+
+/* ─── FOOTER ─── */
+footer{background:var(--BK);padding:5rem 0 0;border-top:3px solid var(--P);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem;}
+.fb-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.85;margin:1.25rem 0;max-width:280px;}
+.fb-socials{display:flex;gap:7px;}
+.fsoc{width:34px;height:34px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;}
+.fsoc:hover{background:var(--P);border-color:var(--P);}
+.fsoc svg{width:12px;height:12px;fill:rgba(255,255,255,.55);}
+.fsoc:hover svg{fill:#fff;}
+.fc-title{font-family:'Barlow',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;padding-bottom:.65rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.fc-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.fc-links a{font-size:13px;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:7px;transition:color .2s;}
+.fc-links a::before{content:'';width:5px;height:1px;background:var(--A);opacity:0;transition:opacity .2s;}
+.fc-links a:hover{color:var(--A);}
+.fc-links a:hover::before{opacity:1;}
+.fct{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.65);margin-bottom:9px;}
+.fct .ms{color:var(--A);font-size:15px;flex-shrink:0;}
+.fct a{color:rgba(255,255,255,.65);transition:color .2s;}
+.fct a:hover{color:var(--A);}
+.footer-bot{border-top:1px solid rgba(255,255,255,.06);padding:1.75rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-bot p{font-size:11px;color:rgba(255,255,255,.55);}
+.fb-links{display:flex;gap:1.5rem;}
+.fb-links a{font-size:11px;color:rgba(255,255,255,.55);transition:color .2s;}
+.fb-links a:hover{color:#fff;}
+
+/* ─── WHATSAPP ─── */
+@keyframes waPulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;align-items:center;}
+.wa-tooltip{position:absolute;right:70px;background:var(--BK);color:#fff;font-family:'Barlow',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:8px 14px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .25s;border-left:3px solid #25d366;}
+.wa-tooltip::after{content:'';position:absolute;right:-7px;top:50%;transform:translateY(-50%);border:5px solid transparent;border-left-color:var(--BK);}
+.wa-float:hover .wa-tooltip{opacity:1;}
+.wa-btn{width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 24px rgba(37,211,102,.45);animation:waPulse 2.5s infinite,waBounce 3s ease-in-out infinite;transition:transform .2s,box-shadow .2s;text-decoration:none;flex-shrink:0;}
+.wa-btn:hover{transform:scale(1.12)!important;box-shadow:0 10px 32px rgba(37,211,102,.65);animation:none;}
+.wa-btn svg{width:30px;height:30px;fill:#fff;}
+@media(max-width:768px){.wa-float{bottom:18px;right:16px;}.wa-btn{width:50px;height:50px;}.wa-btn svg{width:26px;height:26px;}.wa-tooltip{display:none;}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){.slide-inner{grid-template-columns:1fr!important;gap:2rem;}.sr{display:none!important;}.s-h1{font-size:52px;}}
+@media(max-width:1024px){
+  .about-grid,.why-grid,.contact-grid{grid-template-columns:1fr;}
+  .about-right{margin-top:2.5rem;}
+  .about-badge{bottom:1rem;left:1rem;}
+  .phil-grid{grid-template-columns:1fr 1fr;}
+  .svc-grid{grid-template-columns:1fr 1fr;}
+  .am-panel,.cv-panel{grid-template-columns:1fr;}
+  .am-feats{grid-template-columns:1fr 1fr;}
+  .cv-feats{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .stats-in{grid-template-columns:1fr 1fr;}
+  .sc:nth-child(2){border-right:none;}
+  .vmm-grid{grid-template-columns:1fr;}
+  .feat-strip-in{grid-template-columns:1fr;}
+  .fs-play{display:none;}
+  .fs-feat{border-right:none;border-bottom:1px solid var(--GL);}
+}
+@media(max-width:768px){
+  .topbar{display:none;}
+  .nav-links,.nav-cta{display:none!important;}
+  .burger{display:flex!important;}
+  .s-h1{font-size:44px;letter-spacing:1px;}
+  .s-p{font-size:14px;}
+  .s-btns{flex-direction:column;}
+  .s-btns a{justify-content:center;}
+  .s-trust{gap:1rem;flex-wrap:wrap;}
+  .sec-h{font-size:28px!important;letter-spacing:0;}
+  .phil-grid{grid-template-columns:1fr!important;}
+  .svc-grid{grid-template-columns:1fr!important;}
+  .prod-tabs{flex-direction:column!important;width:100%!important;}
+  .ptab{width:100%!important;justify-content:center!important;}
+  .am-panel,.cv-panel{grid-template-columns:1fr!important;padding:1.5rem!important;}
+  .am-feats{grid-template-columns:1fr!important;}
+  .cv-feats{grid-template-columns:1fr!important;}
+  .why-grid{grid-template-columns:1fr!important;}
+  .why-right{grid-template-columns:1fr 1fr!important;}
+  .vmm-grid{grid-template-columns:1fr!important;}
+  .stats-in{grid-template-columns:1fr 1fr!important;}
+  .sc{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.1);}
+  .contact-grid{grid-template-columns:1fr!important;}
+  .form-row{grid-template-columns:1fr!important;}
+  .footer-grid{grid-template-columns:1fr!important;}
+  .cta-in h2{font-size:32px;}
+  .about-mini{grid-template-columns:1fr 1fr!important;}
+  .footer-bot{flex-direction:column;text-align:center;}
+  section{padding:5rem 0;}
+  .wrap{padding:0 1rem;}
+  .slide-inner{padding:0 1rem;}
+  .sr-float{display:none;}
+  .name-box{padding:1.25rem;}
+  .nb-pills{flex-wrap:wrap;}
+  .about-btns{flex-direction:column;}
+  .about-btns a{width:100%;justify-content:center;}
+  .svc-card{padding:1.5rem;}
+  .mock{overflow-x:auto;}
+  .m3{min-width:260px;}
+  .cv-mock{overflow-x:auto;}
+  .faq-q{font-size:13px;}
+  .sb-cards{padding:0 1rem;}
+  .cta-in{padding:0 1rem;}
+  .cf{padding:1.5rem;}
+  .footer-grid{padding:0;}
+  nav .nav-wrap{padding:0 1rem;}
+  .s-arrows{right:1rem;}
+  .s-counter{display:none;}
+}
+@media(max-width:480px){
+  .s-h1{font-size:30px;letter-spacing:0;}
+  .sec-h{font-size:22px!important;}
+  .stats-in{grid-template-columns:1fr!important;}
+  .why-right{grid-template-columns:1fr!important;}
+  .am-feats{grid-template-columns:1fr!important;}
+  .sb-cards{grid-template-columns:1fr!important;}
+  .sb-card{flex-direction:column;gap:.75rem;}
+  .nb-pills{gap:.5rem;}
+  .nb-pill{flex:1;min-width:80px;}
+  .s-eye{flex-wrap:wrap;gap:6px;}
+  .s-trust{flex-direction:column;gap:.75rem;}
+  .sc-n{font-size:40px;}
+  .footer-bot p,.fb-links{font-size:10px;}
+  .fb-links{gap:1rem;flex-wrap:wrap;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="tb-inner">
+    <div class="tb-left">
+      <div class="tb-item"><span class="ms">mail</span> <a href="mailto:contact@synversys.com">contact@synversys.com</a></div>
+      <div class="tb-item"><span class="ms">call</span> +91 9699 9699 22</div>
+    </div>
+    <div class="tb-right">
+      <div class="tb-soc"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></div>
+      <div class="tb-soc"><svg viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></div>
+      <div class="tb-soc"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-wrap">
+    <a href="#home" class="logo"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1776060772/Black_and_Yellow_Modern_Delicious_Snacks_Facebook_Cover_rwtect.png" alt="Synversys"/></a>
+    <ul class="nav-links">
+      <li><a href="#home" class="act">Home</a></li>
+      <li><a href="#about">Who We Are</a></li>
+      <li class="dd">
+        <a href="#services">What We Do ▾</a>
+        <div class="ddm" style="min-width:210px;">
+          <div class="has-sub">
+            <a href="#services">
+              <span class="ms">widgets</span>
+              <div>Products<span class="sub-note">Our digital product suite</span></div>
+              <span class="ms" style="font-size:14px;color:rgba(255,255,255,.35);margin-left:auto;">chevron_right</span>
+            </a>
+            <div class="sub-m">
+              <!-- FIX: Updated AssetMach href to https://www.assetmach.com/ -->
+              <a href="https://www.assetmach.com/" target="_blank" rel="noopener"><span class="ms">corporate_fare</span><div>AssetMach<span class="sub-note">AI-powered enterprise asset management</span></div></a>
+              <div class="ddm-sep"></div>
+              <a href="https://careerviz.com/" target="_blank" rel="noopener"><span class="ms">work</span><div>CareerViz<span class="sub-note">AI career &amp; talent enablement platform</span></div></a>
+            </div>
+          </div>
+          <div class="ddm-sep"></div>
+          <a href="#services"><span class="ms">engineering</span><div>Services<span class="sub-note">Technology, Engineering &amp; more</span></div></a>
+        </div>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get Started</a>
+    <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#about" onclick="closeMenu()">Who We Are</a>
+  <a href="#services" onclick="closeMenu()">What We Do</a>
+  <a href="#products" onclick="closeMenu()" class="mob-sub">↳ Products</a>
+  <!-- FIX: Updated AssetMach mobile link -->
+  <a href="https://www.assetmach.com/" target="_blank" rel="noopener" onclick="closeMenu()" style="padding-left:3.5rem;font-size:12px;color:rgba(255,255,255,.35);">↳ AssetMach</a>
+  <a href="https://careerviz.com/" target="_blank" rel="noopener" onclick="closeMenu()" style="padding-left:3.5rem;font-size:12px;color:rgba(255,255,255,.35);">↳ CareerViz</a>
+  <a href="#services" onclick="closeMenu()" class="mob-sub">↳ Services</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#contact" class="mob-cta-link" onclick="closeMenu()">Get Started</a>
+</div>
+
+<!-- HERO SLIDER -->
+<section id="home">
+  <div class="s-topbar"></div><div class="s-rac"></div>
+  <div class="slider-wrap">
+    <div class="slide s-active">
+      <div class="slide-img"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1920&q=90" alt="Industrial engineering facility"/></div>
+      <div class="slide-body"><div class="slide-inner"><div class="sl">
+        <div class="s-eye"><div class="eline"></div><span>Technology · Engineering · Innovation</span><div class="s-badge"><span class="sdot"></span><em>Live</em></div></div>
+        <div class="s-h1">YOUR GATEWAY<br/>TO INDUSTRIAL<br/><i>INNOVATION</i></div>
+        <p class="s-tag">Innovating for a Smarter Future</p>
+        <p class="s-p">Synversys is a technology-driven enterprise building, modernizing, and operating intelligent systems for businesses, industries, government, and individuals — where engineering meets intelligence.</p>
+        <div class="s-btns"><a href="#services" class="btn btn-primary">Explore Solutions <span class="ms" style="font-size:16px;">arrow_forward</span></a><a href="#about" class="btn btn-outline">Who We Are</a></div>
+        <div class="s-trust"><div class="s-ti"><span class="ms">verified</span> Security-First Design</div><div class="s-ti"><span class="ms">hub</span> End-to-End Delivery</div><div class="s-ti"><span class="ms">devices</span> 9 Service Domains</div></div>
+      </div><div class="sr">
+        <div class="sr-float"><div class="srf-n">500+</div><div class="srf-l">Projects Delivered</div></div>
+        <div class="sr-main"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=85" alt="Engineer at work"/><div class="sr-badge"><div class="srb-n">25+</div><div class="srb-l">Years Experience</div></div></div>
+        <div class="sr-2"><div class="sr-sm"><img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=500&q=80" alt="Industrial"/><div class="sr-sm-l">Engineering &amp; Industrial</div></div><div class="sr-sm"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" alt="Technology"/><div class="sr-sm-l">Data Science &amp; AI</div></div></div>
+      </div></div></div>
+    </div>
+    <div class="slide">
+      <div class="slide-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=90" alt="Smart asset management"/></div>
+      <div class="slide-body"><div class="slide-inner"><div class="sl">
+        <div class="s-eye"><div class="eline"></div><span>Product · AssetMach Platform</span><div class="s-badge"><span class="sdot"></span><em>New</em></div></div>
+        <div class="s-h1">INTELLIGENT<br/>ASSET<br/><i>MANAGEMENT</i></div>
+        <p class="s-tag">AI-Powered · Real-Time · Compliance-Ready</p>
+        <p class="s-p">AssetMach gives enterprises total visibility and control over every physical and digital asset — from acquisition to retirement. Predictive maintenance, real-time tracking, and native ERP integrations in one platform.</p>
+        <div class="s-btns"><a href="#products" onclick="switchPanel('am',null)" class="btn btn-primary">Explore AssetMach <span class="ms" style="font-size:16px;">arrow_forward</span></a><a href="#contact" class="btn btn-outline">Request Demo</a></div>
+        <div class="s-trust"><div class="s-ti"><span class="ms">track_changes</span> GPS + RFID + IoT Tracking</div><div class="s-ti"><span class="ms">analytics</span> AI Predictive Maintenance</div><div class="s-ti"><span class="ms">receipt_long</span> Audit-Ready Compliance</div></div>
+      </div><div class="sr">
+        <div class="sr-float"><div class="srf-n">98.4%</div><div class="srf-l">Asset Utilization</div></div>
+        <div class="sr-main"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=85" alt="AI Dashboard"/><div class="sr-badge"><div class="srb-n">2,847</div><div class="srb-l">Assets Managed</div></div></div>
+        <div class="sr-2"><div class="sr-sm"><img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&q=80" alt="IoT"/><div class="sr-sm-l">IoT Integration</div></div><div class="sr-sm"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" alt="Analytics"/><div class="sr-sm-l">Predictive Analytics</div></div></div>
+      </div></div></div>
+    </div>
+    <div class="slide">
+      <div class="slide-img"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&q=90" alt="Career platform"/></div>
+      <div class="slide-body"><div class="slide-inner"><div class="sl">
+        <div class="s-eye"><div class="eline"></div><span>Product · Careerviz Platform</span><div class="s-badge"><span class="sdot"></span><em>AI-Powered</em></div></div>
+        <div class="s-h1">YOUR CAREER,<br/>REDEFINED BY<br/><i>INTELLIGENCE</i></div>
+        <p class="s-tag">Psychometric · AI Matching · Talent Intelligence</p>
+        <p class="s-p">Careerviz connects top-tier talent with high-growth companies through AI-powered matching, psychometric career mapping, and verified professional networks — built for students, professionals, and enterprises.</p>
+        <div class="s-btns"><a href="https://careerviz.com/" target="_blank" rel="noopener" class="btn btn-accent">Explore Careerviz <span class="ms" style="font-size:16px;">arrow_forward</span></a><a href="#contact" class="btn btn-outline">Get Access</a></div>
+        <div class="s-trust"><div class="s-ti"><span class="ms">psychology</span> Psychometric AI Models</div><div class="s-ti"><span class="ms">work</span> 12,400+ Active Jobs</div><div class="s-ti"><span class="ms">groups</span> 98K+ Professionals</div></div>
+      </div><div class="sr">
+        <div class="sr-float"><div class="srf-n">98K+</div><div class="srf-l">Professionals</div></div>
+        <div class="sr-main"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=85" alt="Team working"/><div class="sr-badge"><div class="srb-n">12,400+</div><div class="srb-l">Active Jobs</div></div></div>
+        <div class="sr-2"><div class="sr-sm"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500&q=80" alt="Career"/><div class="sr-sm-l">Career Growth Hub</div></div><div class="sr-sm"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80" alt="Hiring"/><div class="sr-sm-l">Business Hiring Suite</div></div></div>
+      </div></div></div>
+    </div>
+  </div>
+  <div class="s-dots"><div class="sdot-btn s-active" onclick="goSlide(0)"></div><div class="sdot-btn" onclick="goSlide(1)"></div><div class="sdot-btn" onclick="goSlide(2)"></div></div>
+  <div class="s-arrows"><div class="sarr" onclick="prevSlide()"><span class="ms">chevron_left</span></div><div class="sarr" onclick="nextSlide()"><span class="ms">chevron_right</span></div></div>
+  <div class="s-counter" id="sCounter">01 / 03</div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band"><div class="stats-in">
+  <div class="sc"><span class="sc-n">9<em>+</em></span><span class="sc-l">Service Domains</span></div>
+  <div class="sc"><span class="sc-n">2,415</span><span class="sc-l">Projects Delivered</span></div>
+  <div class="sc"><span class="sc-n">89<em>%</em></span><span class="sc-l">Repeat Clients</span></div>
+  <div class="sc"><span class="sc-n">47<em>B+</em></span><span class="sc-l">Total Solutions Value</span></div>
+</div></div>
+
+<!-- FEATURES STRIP -->
+<div class="feat-strip"><div class="feat-strip-in">
+  <div class="fs-play"><div class="play-c"><span class="ms">play_arrow</span></div></div>
+  <div class="fs-feat"><div class="fs-icon"><span class="ms">precision_manufacturing</span></div><div class="fs-b"><h5>Precision Performance</h5><p>We design and engineer solutions for factories, infrastructure, utilities, and mission-critical industrial environments.</p></div></div>
+  <div class="fs-feat"><div class="fs-icon"><span class="ms">smart_toy</span></div><div class="fs-b"><h5>Innovative Automation</h5><p>From hardware-integrated systems to AI-driven platforms — we automate what matters and deliver measurable efficiency gains.</p></div></div>
+</div></div>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap"><div class="about-grid">
+  <div class="about-left">
+    <div class="eyebrow">Who We Are</div>
+    <div class="sec-h">Your Trusted &amp; Partner in Engineering Excellence</div>
+    <p class="sec-p">Synversys is a technology-driven enterprise focused on building, modernizing, and operating intelligent systems for businesses, industries, government, and individuals. We operate at the intersection of technology services, engineering excellence, and product innovation, delivering solutions that are secure, scalable, and designed for real-world impact.</p>
+    <p class="sec-p" style="margin-top:.85rem;">We don't just implement technology. We design systems, engineer outcomes, and build products that shape the future of work, industry, and digital intelligence.</p>
+    <div class="name-box">
+      <div class="nb-t">The Name <em>SYNVERSYS</em></div>
+      <div class="nb-s">An amalgamation of three words — Syn · Ver · Sys — rooted in our founding ethos.</div>
+      <div class="nb-pills">
+        <div class="nb-pill"><div class="nb-w">SYN</div><div class="nb-d">Greek<br/>"Together" or "United"</div></div>
+        <div class="nb-pill"><div class="nb-w">VER</div><div class="nb-d">Latin<br/>"Truth" or "Real"</div></div>
+        <div class="nb-pill"><div class="nb-w">SYS</div><div class="nb-d">English<br/>"Systems"</div></div>
+      </div>
+      <div class="nb-meaning">"Bring Various Systems Together with Integrity and Intelligence."</div>
+    </div>
+    <div class="about-btns"><a href="#contact" class="btn btn-primary">Work With Us <span class="ms" style="font-size:17px;">arrow_forward</span></a><a href="#services" class="btn btn-outline-p">Our Services</a></div>
+  </div>
+  <div class="about-right">
+    <div class="about-photo-wrap">
+      <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=800&q=80" alt="Engineering team" class="about-photo"/>
+      <div class="about-badge"><div class="ab-n">25<span style="font-size:30px;">+</span></div><div class="ab-l">Years of<br/>Experience</div></div>
+    </div>
+    <div class="about-mini" style="margin-top:2.5rem;">
+      <div class="am-box"><div class="am-n" style="color:var(--P);">Syn</div><div class="am-l">Together · United</div></div>
+      <div class="am-box"><div class="am-n" style="color:var(--P);">Ver</div><div class="am-l">Truth · Real</div></div>
+      <div class="am-box"><div class="am-n" style="color:var(--P);">Sys</div><div class="am-l">Systems</div></div>
+      <div class="am-box accent"><div class="am-n">E2E</div><div class="am-l">Technology Lifecycle</div></div>
+    </div>
+  </div>
+</div></div></section>
+
+<!-- WHO WE SERVE -->
+<div class="sectors-band">
+  <div class="sb-head">
+    <div class="eyebrow">Who We Serve</div>
+    <h2>Built for Every Industry That Demands Excellence</h2>
+    <p>From global corporations to emerging startups — we deliver technology that scales to your ambition and adapts to your sector's demands.</p>
+  </div>
+  <div class="sb-cards">
+    <div class="sb-card">
+      <div class="sb-icon"><span class="ms">apartment</span></div>
+      <div class="sb-body">
+        <h4>Enterprises &amp; Global Corporations</h4>
+        <p>Large-scale digital transformation, ERP integrations, enterprise platforms, and multi-region technology programs built for complexity.</p>
+      </div>
+    </div>
+    <div class="sb-card">
+      <div class="sb-icon"><span class="ms">account_balance</span></div>
+      <div class="sb-body">
+        <h4>Governments &amp; PSUs</h4>
+        <p>Secure, compliant, mission-critical systems for public sector organizations — from smart infrastructure to digital governance platforms.</p>
+      </div>
+    </div>
+    <div class="sb-card">
+      <div class="sb-icon"><span class="ms">factory</span></div>
+      <div class="sb-body">
+        <h4>Manufacturing &amp; Industrial</h4>
+        <p>Industrial IoT, SCADA, asset management, quality systems, and automation solutions designed for factory floors and supply chains.</p>
+      </div>
+    </div>
+    <div class="sb-card">
+      <div class="sb-icon"><span class="ms">bolt</span></div>
+      <div class="sb-body">
+        <h4>Energy, Utilities &amp; Infrastructure</h4>
+        <p>Resilient, high-uptime solutions for energy grids, utilities, and critical infrastructure — engineered for reliability at scale.</p>
+      </div>
+    </div>
+    <div class="sb-card">
+      <div class="sb-icon"><span class="ms">devices</span></div>
+      <div class="sb-body">
+        <h4>Technology &amp; Digital-First Businesses</h4>
+        <p>Product engineering, cloud-native architecture, AI platforms, and cybersecurity for tech companies moving fast and building to last.</p>
+      </div>
+    </div>
+    <div class="sb-card">
+      <div class="sb-icon"><span class="ms">school</span></div>
+      <div class="sb-body">
+        <h4>Institutions, Startups &amp; Individuals</h4>
+        <p>EdTech platforms, career intelligence tools, and consulting for educational institutions, early-stage ventures, and ambitious professionals.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy"><div class="wrap">
+  <div class="phil-head"><div class="eyebrow white" style="justify-content:center;display:flex;">Our Philosophy</div><div class="sec-h w">Built on Three Core Principles</div></div>
+  <div class="phil-grid">
+    <div class="pc"><div class="pc-num">01</div><span class="pc-tag">Syn · Greek</span><h4>Synergy</h4><p>We integrate people, processes, and platforms into unified systems. The best outcomes emerge when diverse capabilities converge under a single, coherent vision.</p></div>
+    <div class="pc"><div class="pc-num">02</div><span class="pc-tag">Ver · Latin</span><h4>Integrity</h4><p>We engineer trust, transparency, and accountability into everything we build. Integrity is foundational to every system, every engagement, every outcome.</p></div>
+    <div class="pc"><div class="pc-num">03</div><span class="pc-tag">Sys · English</span><h4>Systems Thinking</h4><p>We design for scale, longevity, and real-world complexity. Every decision accounts for the full ecosystem — today's needs and tomorrow's demands.</p></div>
+  </div>
+</div></section>
+
+<!-- SERVICES -->
+<section id="services"><div class="wrap">
+  <div class="svc-head"><div class="eyebrow" style="display:flex;justify-content:center;">What We Do</div><div class="sec-h">Engineering Solutions for All Industries</div><p class="sec-p" style="text-align:center;max-width:600px;margin:0 auto;">From ideation and engineering to deployment, operations, and continuous optimization — delivering capabilities that are secure, scalable, and designed for real-world impact.</p></div>
+  <div class="svc-grid">
+    <div class="svc-card"><div class="svc-ic"><span class="ms">terminal</span></div><h5>Technology &amp; Consulting</h5><p>We partner with organizations to define technology strategy, digital roadmaps, operating models, and transformation programs aligned to business outcomes.</p><div class="svc-tags"><span class="svc-tag">IT Strategy</span><span class="svc-tag">Digital Roadmaps</span><span class="svc-tag">Operating Models</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">precision_manufacturing</span></div><h5>Engineering &amp; Industrial Technology</h5><p>From hardware-integrated systems to industrial platforms, we design and engineer solutions for factories, infrastructure, utilities, and mission-critical environments.</p><div class="svc-tags"><span class="svc-tag">Industrial Platforms</span><span class="svc-tag">SCADA</span><span class="svc-tag">IoT</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">inventory_2</span></div><h5>Product Engineering &amp; R&amp;D</h5><p>We build enterprise-grade B2B and scalable B2C digital products using modern architectures, cloud-native design, and AI-first principles.</p><div class="svc-tags"><span class="svc-tag">Cloud-Native</span><span class="svc-tag">AI-First</span><span class="svc-tag">B2B &amp; B2C</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">analytics</span></div><h5>Data Science &amp; Artificial Intelligence</h5><p>We turn data into intelligence — using analytics, machine learning, and AI to enable predictive insights, automation, and smarter decision-making.</p><div class="svc-tags"><span class="svc-tag">Machine Learning</span><span class="svc-tag">Predictive Analytics</span><span class="svc-tag">Automation</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">cloud_done</span></div><h5>Cloud, Infrastructure &amp; Networks</h5><p>We design, migrate, and manage secure, resilient, high-performance infrastructure across cloud, on-prem, and hybrid environments.</p><div class="svc-tags"><span class="svc-tag">Cloud Migration</span><span class="svc-tag">Hybrid Infrastructure</span><span class="svc-tag">Networking</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">encrypted</span></div><h5>Cybersecurity</h5><p>Security is foundational. Our solutions embed governance, risk management, compliance, and cyber resilience by design — not as an afterthought.</p><div class="svc-tags"><span class="svc-tag">Governance</span><span class="svc-tag">Risk &amp; Compliance</span><span class="svc-tag">Cyber Resilience</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">verified</span></div><h5>Quality Control, Assurance &amp; Operations</h5><p>We help organizations ensure operational excellence through quality control systems, inspection platforms, process assurance, and performance optimization.</p><div class="svc-tags"><span class="svc-tag">Quality Systems</span><span class="svc-tag">Process Assurance</span><span class="svc-tag">Performance</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">school</span></div><h5>EdTech</h5><p>At SYNVERSYS, we have designed an AI-based platform powered by established psychometric models, where students and professionals can envision their entire career aligned to their abilities and skills.</p><div class="svc-tags"><span class="svc-tag">AI Platform</span><span class="svc-tag">Psychometric Models</span><span class="svc-tag">Career Intelligence</span></div></div>
+    <div class="svc-card"><div class="svc-ic"><span class="ms">handshake</span></div><h5>Sales Enablement &amp; Channel Partnerships</h5><p>We work with ecosystem partners, OEMs, and channel networks to scale technology adoption and market reach for sustained growth.</p><div class="svc-tags"><span class="svc-tag">Channel Networks</span><span class="svc-tag">OEM Partnerships</span><span class="svc-tag">Market Reach</span></div></div>
+  </div>
+</div></section>
+
+<!-- PRODUCTS -->
+<section id="products"><div class="wrap">
+  <div class="prod-head"><div class="eyebrow white" style="display:flex;justify-content:center;">Our Products</div><div class="sec-h w">Enterprise Digital Products Built to Scale</div></div>
+  <div class="prod-tabs">
+    <button class="ptab active" id="tab-am" onclick="switchPanel('am', this)"><span class="ms" style="font-size:16px;">corporate_fare</span> AssetMach</button>
+    <button class="ptab" id="tab-cv" onclick="switchPanel('cv', this)"><span class="ms" style="font-size:16px;">work</span> Careerviz</button>
+  </div>
+  <div class="prod-p active" id="panel-am">
+    <div class="am-panel">
+      <div>
+        <div class="am-t"><em>AssetMach</em></div>
+        <p class="am-dp">A comprehensive, AI-powered asset management platform giving enterprises total visibility and control over every physical and digital asset — from acquisition through its entire operational life to retirement.</p>
+        <p class="am-dp">Built for organizations managing assets across multiple locations, departments, and regulatory environments — real-time tracking, predictive maintenance, and compliance reporting in one unified system.</p>
+        <div class="am-checks">
+          <div class="am-chk"><span class="ms">check_circle</span> Real-time tracking via GPS, RFID &amp; IoT sensors</div>
+          <div class="am-chk"><span class="ms">check_circle</span> AI-powered predictive maintenance &amp; failure forecasting</div>
+          <div class="am-chk"><span class="ms">check_circle</span> Automated compliance tracking &amp; audit-ready reporting</div>
+          <div class="am-chk"><span class="ms">check_circle</span> Native ERP integrations — SAP, Oracle, Microsoft Dynamics</div>
+          <div class="am-chk"><span class="ms">check_circle</span> Multi-site, multi-currency, multi-language support</div>
+        </div>
+        <a href="https://www.assetmach.com/" class="btn btn-primary">Request a Demo <span class="ms" style="font-size:17px;">arrow_forward</span></a>
+      </div>
+      <div class="mock">
+        <div class="mock-hdr"><h6>Asset Dashboard</h6><div class="mock-live"><span class="dot"></span> Live</div></div>
+        <div class="m3"><div class="mc"><div class="mc-n">2,847</div><div class="mc-l">Total Assets</div></div><div class="mc"><div class="mc-n">$4.2M</div><div class="mc-l">Asset Value</div></div><div class="mc"><div class="mc-n">98.4%</div><div class="mc-l">Utilization</div></div></div>
+        <div class="mrows">
+          <div class="mrow"><div><div class="mrn">Server Cluster A-14</div><div class="mrs">Data Center · Rack 3</div></div><div class="mrv">$128K</div><div class="mrst st-ok">Active</div></div>
+          <div class="mrow"><div><div class="mrn">Fleet Vehicle #07</div><div class="mrs">Logistics · Zone B</div></div><div class="mrv">$52K</div><div class="mrst st-ok">Active</div></div>
+          <div class="mrow"><div><div class="mrn">CNC Machine M3</div><div class="mrs">Factory Floor · Bay 2</div></div><div class="mrv">$340K</div><div class="mrst st-rv">Review</div></div>
+          <div class="mrow"><div><div class="mrn">HVAC Unit B-22</div><div class="mrs">Building B · Rooftop</div></div><div class="mrv">$18K</div><div class="mrst st-ok">Active</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="am-feats">
+      <div class="afc"><div class="afc-ic"><span class="ms">track_changes</span></div><h5>Real-Time Tracking</h5><p>Monitor every asset in real time via GPS, RFID, and IoT — zero blind spots anywhere.</p></div>
+      <div class="afc"><div class="afc-ic"><span class="ms">analytics</span></div><h5>Predictive Analytics</h5><p>AI insights predict maintenance needs and flag at-risk assets before failures occur.</p></div>
+      <div class="afc"><div class="afc-ic"><span class="ms">receipt_long</span></div><h5>Compliance &amp; Audit</h5><p>Automated tracking, complete audit trails, and regulatory reporting always ready.</p></div>
+      <div class="afc"><div class="afc-ic"><span class="ms">lan</span></div><h5>Multi-Site Management</h5><p>Manage assets across unlimited locations with role-based access control.</p></div>
+      <div class="afc"><div class="afc-ic"><span class="ms">build_circle</span></div><h5>Maintenance Scheduling</h5><p>Automated workflows, vendor management, and full service histories.</p></div>
+      <div class="afc"><div class="afc-ic"><span class="ms">integration_instructions</span></div><h5>ERP Integration</h5><p>Native integrations with SAP, Oracle, Microsoft Dynamics and all major ERPs.</p></div>
+    </div>
+  </div>
+  <div class="prod-p" id="panel-cv">
+    <div class="cv-panel">
+      <div>
+        <div class="cv-t"><em>Careerviz</em></div>
+        <p class="cv-dp">The all-in-one career and business enablement platform — AI-powered, psychometric model-driven — connecting top-tier talent with high-growth companies through a verified professional network.</p>
+        <p class="cv-dp">At SYNVERSYS, we have designed an AI-based platform powered by established psychometric models, where students and professionals can envision their entire career which is apt for their abilities and skills.</p>
+        <div class="cv-checks">
+          <div class="cv-chk"><span class="ms">check_circle</span> AI job matching based on skills, culture &amp; career goals</div>
+          <div class="cv-chk"><span class="ms">check_circle</span> Full employer brand page and ATS integration</div>
+          <div class="cv-chk"><span class="ms">check_circle</span> Career growth hub — mentorship, assessments &amp; learning paths</div>
+          <div class="cv-chk"><span class="ms">check_circle</span> Real-time salary benchmarking and compensation intelligence</div>
+          <div class="cv-chk"><span class="ms">check_circle</span> Psychometric-backed career pathway mapping</div>
+        </div>
+        <a href="https://careerviz.com/" target="_blank" rel="noopener" class="btn btn-accent">Go to Careerviz <span class="ms" style="font-size:17px;">arrow_forward</span></a>
+      </div>
+      <div class="cv-mock">
+        <div class="cv-top"><div class="cv-stat cy"><div class="cvs-n">12,400+</div><div class="cvs-l">Active Jobs</div></div><div class="cv-stat dk"><div class="cvs-n">98K+</div><div class="cvs-l">Professionals</div></div></div>
+        <div class="cv-jobs">
+          <div class="cvj"><div><h6>Senior Systems Engineer</h6><span>Synversys · Remote · $140K–$180K</span></div><div class="cvj-tag hot">🔥 Hot</div></div>
+          <div class="cvj"><div><h6>AI Product Manager</h6><span>TechCorp · Hybrid · $120K–$155K</span></div><div class="cvj-tag new">New</div></div>
+          <div class="cvj"><div><h6>Cloud Infrastructure Lead</h6><span>GlobalFin · On-site · $160K+</span></div><div class="cvj-tag hot">🔥 Hot</div></div>
+          <div class="cvj"><div><h6>Cybersecurity Analyst</h6><span>DefendCo · Remote · $95K–$125K</span></div><div class="cvj-tag new">New</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cv-feats">
+      <div class="cvfc"><div class="cvfc-ic"><span class="ms">psychology</span></div><h5>AI-Powered Matching</h5><p>Skills, experience, culture fit, and career trajectory — far beyond keyword matching.</p></div>
+      <div class="cvfc"><div class="cvfc-ic"><span class="ms">business_center</span></div><h5>Business Hiring Suite</h5><p>Employer pages, ATS integration, AI screening, and full hiring pipeline management.</p></div>
+      <div class="cvfc"><div class="cvfc-ic"><span class="ms">school</span></div><h5>Career Growth Hub</h5><p>Learning paths, mentorship, psychometric assessments, and portfolio tools for professionals.</p></div>
+      <div class="cvfc"><div class="cvfc-ic"><span class="ms">payments</span></div><h5>Salary Intelligence</h5><p>Real-time compensation benchmarking powered by live market data — negotiate confidently.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- VMM -->
+<div class="vmm"><div class="wrap"><div class="vmm-grid">
+  <div class="vm"><span class="ms vm-ic">visibility</span><h4>Our Vision</h4><p>To be the world's most trusted technology enterprise — building intelligent systems that power the future of industry, government, and human progress with integrity and excellence.</p><div class="vm-link">Read More <span class="ms">arrow_forward</span></div></div>
+  <div class="vm active"><span class="ms vm-ic">flag</span><h4>Our Mission</h4><p>We don't just implement technology. We design systems, engineer outcomes, and build products that shape the future of work, industry, and digital intelligence — from ideation to continuous optimization.</p><div class="vm-link">Read More <span class="ms">arrow_forward</span></div></div>
+  <div class="vm"><span class="ms vm-ic">settings</span><h4>Our Mode</h4><p>We operate at the intersection of technology services, engineering excellence, and product innovation — delivering solutions that are secure, scalable, and designed for real-world impact.</p><div class="vm-link">Read More <span class="ms">arrow_forward</span></div></div>
+</div></div></div>
+
+<!-- WHY SYNVERSYS -->
+<section id="why"><div class="wrap"><div class="why-grid">
+  <div class="why-left">
+    <div class="eyebrow">Why Synversys</div>
+    <div class="sec-h">Where Technology Meets Engineering Intelligence</div>
+    <p class="sec-p">Synversys is where technology meets engineering intelligence. We bring together the discipline, depth, and design thinking needed to build systems that truly last.</p>
+    <div class="why-feats">
+      <div class="wf"><div class="wf-ic"><span class="ms">security</span></div><div class="wf-b"><h6>Enterprise-Grade Engineering Discipline</h6><p>Security-first, compliance-aware design embedded from day one — not bolted on as an afterthought.</p></div></div>
+      <div class="wf"><div class="wf-ic"><span class="ms">hub</span></div><div class="wf-b"><h6>Deep Cross-Domain Expertise</h6><p>Our leadership team brings rare depth across technology services, industrial engineering, data intelligence, and product innovation.</p></div></div>
+      <div class="wf"><div class="wf-ic"><span class="ms">inventory_2</span></div><div class="wf-b"><h6>Products &amp; Services Under One Roof</h6><p>One stop shop — enterprise products and bespoke services across the full technology lifecycle, eliminating fragmentation.</p></div></div>
+      <div class="wf"><div class="wf-ic"><span class="ms">trending_up</span></div><div class="wf-b"><h6>Built for Scale and Longevity</h6><p>We design systems that scale with your ambition, adapt to change, and remain resilient over the long term.</p></div></div>
+    </div>
+  </div>
+  <div class="why-right">
+    <div class="ws p"><span class="ws-n">9<em>+</em></span><span class="ws-l">Service Domains</span></div>
+    <div class="ws"><span class="ws-n">1<em>×</em></span><span class="ws-l">Unified Partner</span></div>
+    <div class="ws"><span class="ws-n" style="font-size:30px;letter-spacing:-1px;">E2E</span><span class="ws-l">Technology Lifecycle</span></div>
+    <div class="ws p"><span class="ws-n" style="font-size:26px;">Real World</span><span class="ws-l">Impact by Design</span></div>
+  </div>
+</div></div></section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-bg"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80" alt="Engineering"/></div>
+  <div class="cta-in">
+    <h2>Empower Your Future with Industrial Excellence, Seize the Opportunity to <em>Engineer Innovation</em></h2>
+    <p>Let's build systems that scale, protect, and outperform — together. Synversys is where technology meets engineering intelligence.</p>
+    <div class="cta-btns"><a href="#contact" class="btn btn-primary">Start a Conversation <span class="ms" style="font-size:17px;">arrow_forward</span></a><a href="#services" class="btn btn-outline">Explore Services</a></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact"><div class="wrap">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="eyebrow">Get in Touch</div>
+      <div class="sec-h">Let's Start a Conversation</div>
+      <p class="sec-p">Whether you're exploring a product, scoping a new project, or simply want to learn more about how Synversys can transform your operations — we're here and ready.</p>
+      <div class="ci-list">
+        <div class="ci"><div class="ci-ic"><span class="ms">mail</span></div><div><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:contact@synversys.com">contact@synversys.com</a></div></div></div>
+        <div class="ci"><div class="ci-ic"><span class="ms">call</span></div><div><div class="ci-lbl">Phone</div><div class="ci-val">+91 9699 9699 22</div></div></div>
+        <div class="ci"><div class="ci-ic"><span class="ms">schedule</span></div><div><div class="ci-lbl">Business Hours</div><div class="ci-val">Mon–Fri, 9AM–6PM IST</div></div></div>
+      </div>
+    </div>
+
+    <div class="cf">
+      <h4>Send Us a Message</h4>
+      <div class="cf-sub">Fill out the form and our team will respond within 4 business hours.</div>
+      <form
+        id="contact-form"
+        action="https://formsubmit.co/contact@synversys.com"
+        method="POST"
+        novalidate
+      >
+        <input type="hidden" name="_subject" value="New Inquiry via Synversys.com"/>
+        <input type="hidden" name="_captcha" value="false"/>
+        <input type="hidden" name="_template" value="table"/>
+        <input type="hidden" name="_next" value="https://synversys.com/thank-you.html"/>
+        <input type="text" name="_honey" style="display:none"/>
+        <div class="form-row">
+          <div class="fg">
+            <label for="cf-fname">First Name *</label>
+            <input id="cf-fname" name="first_name" type="text" placeholder="John" required/>
+          </div>
+          <div class="fg">
+            <label for="cf-lname">Last Name *</label>
+            <input id="cf-lname" name="last_name" type="text" placeholder="Smith" required/>
+          </div>
+        </div>
+        <div class="fg">
+          <label for="cf-email">Work Email *</label>
+          <input id="cf-email" name="email" type="email" placeholder="john@company.com" required/>
+        </div>
+        <div class="fg">
+          <label for="cf-company">Company</label>
+          <input id="cf-company" name="company" type="text" placeholder="Your Company Inc."/>
+        </div>
+        <div class="fg">
+          <label for="cf-service">Service Interest</label>
+          <select id="cf-service" name="service_interest">
+            <option value="">Select an option...</option>
+            <option>AssetMach Platform</option>
+            <option>Careerviz Platform</option>
+            <option>Technology &amp; Consulting</option>
+            <option>Engineering &amp; Industrial Technology</option>
+            <option>Data Science &amp; AI</option>
+            <option>Cloud, Infrastructure &amp; Networks</option>
+            <option>Cybersecurity</option>
+            <option>Quality Control &amp; Operations</option>
+            <option>EdTech</option>
+            <option>Sales Enablement &amp; Partnerships</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="cf-msg">Message *</label>
+          <textarea id="cf-msg" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <button type="submit" class="form-sub" id="form-btn">
+          Send Message <span class="ms" style="font-size:17px;">send</span>
+        </button>
+      </form>
+      <p class="form-note">🔒 Your information is secure and will never be shared.</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="faq-head"><div class="eyebrow" style="display:flex;justify-content:center;">FAQ</div><div class="sec-h" style="text-align:center;font-size:34px;">Most Popular Questions</div></div>
+    <div class="faq-list">
+      <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">Why should I choose Synversys as my technology partner?<div class="faq-ico"><span class="ms">remove</span></div></div><div class="faq-a">Synversys brings rare depth across 9 service domains — technology consulting, industrial engineering, data intelligence, cybersecurity, product R&D, and more. We're a one-stop shop for end-to-end technology lifecycle delivery with security-first, compliance-aware design built into every engagement.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What industries does Synversys serve?<div class="faq-ico"><span class="ms">add</span></div></div><div class="faq-a">We serve enterprises and global corporations, governments and PSUs, manufacturing and industrial organizations, energy/utilities/infrastructure providers, technology and digital-first businesses, and institutions, startups, and individuals.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What does the name SYNVERSYS mean?<div class="faq-ico"><span class="ms">add</span></div></div><div class="faq-a">SYNVERSYS is an amalgamation of three words: Syn (Greek: "Together"), Ver (Latin: "Truth"), Sys (English: "Systems") — meaning "Bring Various Systems Together with Integrity and Intelligence." It defines our foundational philosophy of unified, trustworthy systems.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How does the AssetMach platform work?<div class="faq-ico"><span class="ms">add</span></div></div><div class="faq-a">AssetMach is an AI-powered asset management platform providing total visibility and control over every physical and digital asset — from acquisition to retirement. It includes real-time tracking via GPS/RFID/IoT, predictive maintenance, compliance reporting, and native ERP integrations.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is Careerviz different from other job platforms?<div class="faq-ico"><span class="ms">add</span></div></div><div class="faq-a">Careerviz is powered by established psychometric models and AI matching — going far beyond keyword matching to analyze skills, culture fit, and full career trajectory. It's designed to help students and professionals envision and navigate their entire career path.</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="footer-grid">
+    <div>
+      <a href="#home"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1776060772/Black_and_Yellow_Modern_Delicious_Snacks_Facebook_Cover_rwtect.png" alt="Synversys" style="height:60px;width:auto;max-width:220px;object-fit:contain;"/></a>
+      <p class="fb-desc">Architecting the digital frontier through holistic integration and technological excellence. Innovating for a Smarter Future — built for real-world impact.</p>
+      <div class="fb-socials">
+        <div class="fsoc"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></div>
+        <div class="fsoc"><svg viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></div>
+        <div class="fsoc"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </div>
+    </div>
+    <div><div class="fc-title">Company</div><ul class="fc-links"><li><a href="#about">About Us</a></li><li><a href="#about">Our Philosophy</a></li><li><a href="#">Careers</a></li><li><a href="#">Newsroom</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><div class="fc-title">What We Do</div><ul class="fc-links"><li><a href="#products">AssetMach</a></li><li><a href="https://careerviz.com/" target="_blank" rel="noopener">Careerviz</a></li><li><a href="#services">All Services</a></li><li><a href="#services">EdTech</a></li><li><a href="#services">Cybersecurity</a></li></ul></div>
+    <div><div class="fc-title">Connect With Us</div><div class="fct"><span class="ms">mail</span> <a href="mailto:contact@synversys.com">contact@synversys.com</a></div><div class="fct"><span class="ms">call</span> +91 9699 9699 22</div><div class="fct"><span class="ms">location_on</span> Bhubaneswar</div><div class="fct"><span class="ms">schedule</span> Mon–Fri, 9AM–6PM IST</div></div>
+  </div>
+  <div class="footer-bot"><p>© 2025 SYNVERSYS INC. ALL RIGHTS RESERVED.</p><div class="fb-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Settings</a></div></div>
+</div></footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<div class="wa-float">
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+  <a class="wa-btn" href="https://wa.me/919699969922" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 0C7.164 0 0 7.163 0 16c0 2.822.736 5.47 2.027 7.773L0 32l8.489-2.001A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.2a13.17 13.17 0 01-6.7-1.828l-.48-.286-4.969 1.171 1.241-4.832-.314-.497A13.14 13.14 0 012.8 16C2.8 8.71 8.71 2.8 16 2.8S29.2 8.71 29.2 16 23.29 29.2 16 29.2zm7.261-9.843c-.398-.199-2.352-1.16-2.717-1.292-.365-.133-.63-.199-.896.199-.265.397-1.029 1.292-1.261 1.558-.232.265-.464.298-.862.1-.398-.2-1.681-.619-3.202-1.977-1.184-1.057-1.983-2.363-2.215-2.761-.232-.398-.025-.613.174-.811.179-.178.398-.464.597-.696.199-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.896-2.161-1.228-2.957-.323-.776-.651-.671-.896-.683l-.763-.013c-.265 0-.696.1-1.061.497-.365.398-1.393 1.36-1.393 3.316 0 1.957 1.426 3.847 1.625 4.112.199.265 2.806 4.283 6.797 6.007.95.41 1.691.655 2.269.839.953.303 1.821.26 2.507.158.765-.114 2.352-.961 2.683-1.889.332-.928.332-1.724.232-1.889-.099-.166-.365-.265-.763-.464z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+/* ── NAV / MENU ── */
+function toggleMenu() { document.getElementById('mobMenu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobMenu').classList.remove('open'); }
+
+/* ── SLIDER ── */
+var slideIdx = 0, slides = [], dots = [], sliderTimer = null;
+function initSlider() {
+  slides = document.querySelectorAll('.slide');
+  dots = document.querySelectorAll('.sdot-btn');
+  if (!slides.length) return;
+  goSlide(0);
+  startAuto();
+}
+function goSlide(n) {
+  slides.forEach(function(s, i) {
+    s.classList.remove('s-active');
+    if (dots[i]) dots[i].classList.remove('s-active');
+  });
+  slideIdx = (n + slides.length) % slides.length;
+  slides[slideIdx].classList.add('s-active');
+  if (dots[slideIdx]) dots[slideIdx].classList.add('s-active');
+  var c = document.getElementById('sCounter');
+  if (c) c.textContent = ('0' + (slideIdx + 1)).slice(-2) + ' / 0' + slides.length;
+}
+function nextSlide() { clearAuto(); goSlide(slideIdx + 1); startAuto(); }
+function prevSlide() { clearAuto(); goSlide(slideIdx - 1); startAuto(); }
+function startAuto() { sliderTimer = setInterval(function() { goSlide(slideIdx + 1); }, 5000); }
+function clearAuto() { if (sliderTimer) clearInterval(sliderTimer); }
+
+/* ── PRODUCT TABS ── FIX: Robust tab switching ── */
+function switchPanel(id, btn) {
+  /* Hide all panels */
+  document.querySelectorAll('.prod-p').forEach(function(p) {
+    p.classList.remove('active');
+  });
+  /* Deactivate all tab buttons */
+  document.querySelectorAll('.ptab').forEach(function(b) {
+    b.classList.remove('active');
+  });
+  /* Show the selected panel */
+  var panel = document.getElementById('panel-' + id);
+  if (panel) panel.classList.add('active');
+  /* Activate the clicked button — support both direct pass and null */
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    /* Called programmatically without a button reference */
+    var fallback = document.getElementById('tab-' + id);
+    if (fallback) fallback.classList.add('active');
+  }
+}
+
+/* ── FAQ ── */
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(fi) {
+    fi.classList.remove('open');
+    var ico = fi.querySelector('.faq-ico .ms');
+    if (ico) ico.textContent = 'add';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    var ico = item.querySelector('.faq-ico .ms');
+    if (ico) ico.textContent = 'remove';
+  }
+}
+
+/* ── SCROLL NAV HIGHLIGHT ── */
+window.addEventListener('scroll', function() {
+  var ids = ['home', 'about', 'services', 'contact'];
+  var links = document.querySelectorAll('.nav-links a[href^="#"]');
+  var fromTop = window.scrollY + 120;
+  ids.forEach(function(id) {
+    var sec = document.getElementById(id);
+    if (sec && sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop) {
+      links.forEach(function(l) { l.classList.remove('act'); });
+      var activeLink = document.querySelector('.nav-links a[href="#' + id + '"]');
+      if (activeLink) activeLink.classList.add('act');
+    }
+  });
+});
+
+/* ── CONTACT FORM — client-side validation before FormSubmit ── */
+document.addEventListener('DOMContentLoaded', function() {
+  initSlider();
+
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.querySelectorAll('input, textarea').forEach(function(el) {
+      el.addEventListener('input', function() { this.classList.remove('field-error'); });
+    });
+
+    form.addEventListener('submit', function(e) {
+      var ok = true;
+      ['cf-fname', 'cf-lname', 'cf-email', 'cf-msg'].forEach(function(fid) {
+        var el = document.getElementById(fid);
+        if (el && !el.value.trim()) {
+          el.classList.add('field-error');
+          ok = false;
+        } else if (el) {
+          el.classList.remove('field-error');
+        }
+      });
+
+      var emailEl = document.getElementById('cf-email');
+      if (emailEl && emailEl.value.trim()) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailEl.value.trim())) {
+          emailEl.classList.add('field-error');
+          ok = false;
+        }
+      }
+
+      if (!ok) {
+        e.preventDefault();
+        var firstError = form.querySelector('.field-error');
+        if (firstError) firstError.focus();
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
